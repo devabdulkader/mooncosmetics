@@ -1,222 +1,100 @@
 const page = () => {
+  const services = [
+    {
+      title: "Heritage of Quality",
+      description:
+        "With 38 years of expertise, Moon Cosmetics provides high-quality products crafted to suit the diverse climate of Bangladesh.",
+    },
+    {
+      title: "Accessible Beauty",
+      description:
+        "Our wide range of products is designed to be affordable and accessible for all, ensuring that beauty is within everyone's reach.",
+    },
+    {
+      title: "Commitment to Excellence",
+      description:
+        "We are dedicated to maintaining international quality standards through innovative manufacturing and skilled craftsmanship.",
+    },
+  ];
+
   return (
     <section>
-      {/* Container */}
-      <div className="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
-        {/* Component */}
-        <div className="flex flex-col gap-8 lg:flex-row lg:gap-10">
-          {/* Content */}
-          <div className="flex flex-col gap-8 lg:w-3/5">
-            <h2 className="mb-8 text-3xl font-bold md:text-5xl">About us</h2>
-            <p className="text-sm sm:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin
-              fermentum leo vel orci. Dui faucibus in ornare quam viverra orci
-              sagittis eu. Viverra nam libero justo laoreet sit amet. Vulputate
-              odio ut enim blandit volutpat maecenas volutpat blandit. A lacus
-              vestibulum sed arcu non odio euismod. Feugiat pretium nibh ipsum
-              consequat. Cum sociis natoque penatibus et. Leo in vitae turpis
-              massa sed. Neque aliquam vestibulum morbi blandit cursus.
-              Facilisis sed odio morbi quis. A pellentesque sit amet porttitor
-              eget.
+      <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-[#edf7fa]">
+        <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+          <svg
+            className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
+            viewBox="0 0 100 100"
+            fill="currentColor"
+            preserveAspectRatio="none slice"
+          >
+            <path d="M50 0H100L50 100H0L50 0Z" />
+          </svg>
+          <img
+            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            alt=""
+          />
+        </div>
+        <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+          <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
+            <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+              Brand new
             </p>
-            <a
-              href="#"
-              className="w-36 rounded-md bg-black px-6 py-3 text-center font-semibold text-white"
-            >
-              Learn More
-            </a>
-            {/* Divider */} <div className="my-8 h-px w-full bg-black"></div>
-            {/* Testimonials */}
-            <div className="grid gap-8 md:grid-cols-2 md:gap-4">
-              <div className="flex flex-col gap-4 rounded-md border border-solid bg-gray-100 p-6 md:p-4">
-                <p className="text-sm">
-                  I have been using the Business Solution services for the past
-                  year, and I am extremely satisfied with the results. Their
-                  innovative solutions and expertise have transformed my
-                  business operations.
-                </p>
-                <div className="flex items-center gap-2 sm:gap-x-4">
-                  <div className="flex items-center gap-x-2">
-                    <img
-                      src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844"
-                      alt=""
-                      className="h-12 w-12 rounded-full object-cover"
-                    />
-                    <p className="text-sm font-semibold sm:text-base">
-                      Alleyah
-                    </p>
-                  </div>
-                  {/* Divider */} <div className="h-5 w-px bg-gray-300"></div>
-                  <div className="flex items-center gap-x-2">
-                    <p className="text-sm font-semibold sm:text-base">5.0</p>
-                    <div className="flex text-orange-500">
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4 rounded-md border border-solid bg-gray-100 p-6 md:p-4">
-                <p className="text-sm">
-                  I have been using the Business Solution services for the past
-                  year, and I am extremely satisfied with the results. Their
-                  innovative solutions and expertise have transformed my
-                  business operations.
-                </p>
-                <div className="flex items-center gap-2 sm:gap-x-4">
-                  <div className="flex items-center gap-x-2">
-                    <img
-                      src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPLaceholder%20Image%20Secondary.svg?alt=media&token=b8276192-19ff-4dd9-8750-80bc5f7d6844"
-                      alt=""
-                      className="h-12 w-12 rounded-full object-cover"
-                    />
-                    <p className="text-sm font-semibold sm:text-base">
-                      Alleyah
-                    </p>
-                  </div>
-                  {/* Divider */} <div className="h-5 w-px bg-gray-300"></div>
-                  <div className="flex items-center gap-x-2">
-                    <p className="text-sm font-semibold sm:text-base">5.0</p>
-                    <div className="flex text-orange-500">
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                      <svg
-                        className="h-4 w-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="100%"
-                        height="100%"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08l4.15-2.5z"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              Everything you
+              <br className="hidden md:block" />
+              can imagine{" "}
+              <span className="inline-block text-deep-purple-accent-400">
+                is real
+              </span>
+            </h2>
+            <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae. explicabo.
+            </p>
+            <div className="flex items-center">
+              <a
+                href="/"
+                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white bg-black transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+              >
+                Get in touch with us
+              </a>
             </div>
           </div>
-          {/* Image */}
-          <div className="w-full rounded-md bg-gray-100 max-[991px]:h-[475px] lg:w-2/5"></div>
         </div>
       </div>
+
+      <section>
+        {/* Container */}
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+          {/* Title */}
+          <h2 className="mx-auto mb-8 max-w-3xl text-center text-3xl font-bold md:mb-12 md:text-5xl lg:mb-16">
+            Smooth Process. Transformative Outcomes.
+          </h2>
+          {/* Content */}
+          <div className="flex flex-col items-center justify-center bg-contain bg-center pt-10 bg-[url('https://assets.website-files.com/6458c625291a94a195e6cf3a/648825fca218588cb636c341_Group%2048114.png')]">
+            <div className="flex flex-col justify-around gap-4 sm:flex-row">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="rounded-md border border-solid border-gray-300 bg-white p-6 text-black"
+                >
+                  <h5 className="mb-2 text-xl font-bold">{service.title}</h5>
+                  <p className="text-sm">{service.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="max-w-5xl">
+              <img
+                src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6488257b75d6a7b950248536_Group%2048113.svg"
+                alt=""
+                className="mt-16 inline-block"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };

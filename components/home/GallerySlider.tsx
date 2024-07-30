@@ -8,11 +8,7 @@ import category5 from "@/public/category/category5.jpeg";
 import category6 from "@/public/category/category6.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {} from "swiper"; // Import Autoplay and Navigation modules
-
 import "swiper/css/autoplay"; // Import Autoplay styles if needed
-// Import Swiper React components
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 

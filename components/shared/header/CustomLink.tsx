@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CustomLinkProps } from "@/types";
 
-export default function CustomLink({ path, prefetch = true, children }) {
+const CustomLink = ({ path, prefetch = true, children }: CustomLinkProps) => {
   const pathname = usePathname();
   const active = pathname === path;
 
@@ -12,4 +13,5 @@ export default function CustomLink({ path, prefetch = true, children }) {
       {children}
     </Link>
   );
-}
+};
+export default CustomLink;

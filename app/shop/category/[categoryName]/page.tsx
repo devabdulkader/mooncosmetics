@@ -2,41 +2,11 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-// Define the types for category and product data
-interface Category {
-  title: string;
-  breadcrumb: string;
-  slug: string;
-  image: string;
-}
-
-interface Product {
-  id: string;
-  name: string;
-  categorySlug: string;
-  brand: string;
-  description: string;
-  price: number;
-  quantity: number;
-  image: string;
-  popularity: number;
-  trendingStatus: boolean;
-  availability: boolean;
-  createdAt: string;
-  updatedAt: string;
-}
-
-// Define the type for the component props
-interface PageProps {
-  params: {
-    categoryName: string;
-  };
-}
+import { PageProps, ICategory, IProduct } from "@/types";
 
 const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
-  const [categoryData, setCategoryData] = useState<Category[]>([]);
-  const [productData, setProductData] = useState<Product[]>([]);
+  const [categoryData, setCategoryData] = useState<ICategory[]>([]);
+  const [productData, setProductData] = useState<IProduct[]>([]);
   const [categoryBanner, setCategoryBanner] = useState<string>("");
 
   useEffect(() => {
@@ -45,7 +15,7 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
       .then((data) => {
         setCategoryData(data);
         const category = data.find(
-          (cat: Category) => cat.slug === categoryName
+          (cat: ICategory) => cat.slug === categoryName
         );
         if (category) {
           setCategoryBanner(category.image);
@@ -61,9 +31,9 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
       });
   }, []);
 
-  function filterProductsByCategorySlug(categorySlug: string): Product[] {
+  function filterProductsByCategorySlug(categorySlug: string): IProduct[] {
     return productData.filter(
-      (product: Product) => product.categorySlug === categorySlug
+      (product: IProduct) => product.categorySlug === categorySlug
     );
   }
 

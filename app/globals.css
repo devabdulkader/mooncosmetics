@@ -7,9 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+/* body {
   background-color: #edf7fa;
-}
+} */
 .work-sans-regular {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;

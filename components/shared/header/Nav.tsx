@@ -3,18 +3,20 @@ import Link from "next/link";
 import CustomLink from "./CustomLink";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { useEffect, useState } from "react";
-
+import { INavItem } from "@/types";
 const Nav = () => {
-  const [navigationData, setNavigationData] = useState([]);
-  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+  const [navigationData, setNavigationData] = useState<INavItem[]>([]);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
+    null
+  );
 
   useEffect(() => {
     fetch("/data/navigationData.json")
       .then((response) => response.json())
-      .then((data) => setNavigationData(data));
+      .then((data: INavItem[]) => setNavigationData(data));
   }, []);
 
-  const handleMouseEnter = (index) => {
+  const handleMouseEnter = (index: number) => {
     setOpenDropdownIndex(index);
   };
 
@@ -32,7 +34,7 @@ const Nav = () => {
           onMouseLeave={handleMouseLeave} // Hide dropdown on mouse leave
         >
           {navItem.dropdown ? (
-            <div className="flex items-center justify-center h-full text-md px-2   cursor-pointer">
+            <div className="flex items-center justify-center h-full text-md px-2 cursor-pointer">
               <CustomLink path={navItem.path}>{navItem.title}</CustomLink>
               <MdOutlineKeyboardArrowDown size={30} />
             </div>
@@ -40,10 +42,10 @@ const Nav = () => {
             <CustomLink path={navItem.path}>{navItem.title}</CustomLink>
           )}
           {navItem.dropdown && openDropdownIndex === index && (
-            <ul className="absolute left-0 top-14  shadow bg-white  w-80  z-10">
-              {navItem.items.map((subItem, subIndex) => (
+            <ul className="absolute left-0 top-14 shadow bg-white w-80 z-10">
+              {navItem.items?.map((subItem, subIndex) => (
                 <li key={subIndex} className="hover:bg-green-200 px-5 py-2">
-                  <CustomLink path={`/shop/category/${subItem.path}`}>
+                  <CustomLink path={`/shop/category${subItem.path}`}>
                     {subItem.title}
                   </CustomLink>
                 </li>
