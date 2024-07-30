@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Home",
+    "path": "/",
+    "dropdown": false
+  },
+  {
+    "title": "Shop",
+    "path": "/shop",
+    "dropdown": false
+  },
+  {
+    "title": "Product Category",
+    "path": "#",
+    "dropdown": true,
+    "items": [
+      {
+        "title": "Herbal Oil",
+        "path": "/herbal-oil"
+      },
+      {
+        "title": "Hair Care",
+        "path": "/hair-care"
+      },
+      {
+        "title": "Winter Care Collection",
+        "path": "/winter-care-collection"
+      },
+      {
+        "title": "Color Cosmetics",
+        "path": "/color-cosmetics"
+      },
+      {
+        "title": "Fragrances",
+        "path": "/fragrances"
+      }
+    ]
+  },
+  {
+    "title": "About Us",
+    "path": "/about",
+    "dropdown": false
+  },
+  {
+    "title": "Contact Us",
+    "path": "/contact",
+    "dropdown": false
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "Herbal Oil",
+    "categorySlug": "herbal-oil",
+    "brand": "HerbalEssence",
+    "description": "Natural herbal oil for healthy hair.",
+    "price": 15.99,
+    "quantity": 100,
+    "image": "/products/herbal-oil.png",
+    "popularity": 4.5,
+    "trendingStatus": true,
+    "availability": true,
+    "createdAt": "2024-01-01T00:00:00Z",
+    "updatedAt": "2024-07-30T00:00:00Z"
+  },
+  {
+    "id": "2",
+    "name": "Hair Care Shampoo",
+    "categorySlug": "hair-care",
+    "brand": "Nourish",
+    "description": "Shampoo for deep nourishment and hydration.",
+    "price": 12.5,
+    "quantity": 50,
+    "image": "/products/hair-care-shampoo.png",
+    "popularity": 4.8,
+    "trendingStatus": false,
+    "availability": true,
+    "createdAt": "2024-01-05T00:00:00Z",
+    "updatedAt": "2024-07-30T00:00:00Z"
+  }
+]
