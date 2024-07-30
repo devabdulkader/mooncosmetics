@@ -2,6 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+// Define the type for the component props
+interface PageProps {
+  params: {
+    categoryName: string;
+  };
+}
 
 const Page = ({ params: { categoryName } }) => {
   const [categoryData, setCategoryData] = useState([]);
