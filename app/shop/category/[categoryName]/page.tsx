@@ -2,6 +2,31 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+
+// Define the types for category and product data
+interface Category {
+  title: string;
+  breadcrumb: string;
+  slug: string;
+  image: string;
+}
+
+interface Product {
+  id: string;
+  name: string;
+  categorySlug: string;
+  brand: string;
+  description: string;
+  price: number;
+  quantity: number;
+  image: string;
+  popularity: number;
+  trendingStatus: boolean;
+  availability: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
 // Define the type for the component props
 interface PageProps {
   params: {
@@ -10,21 +35,23 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
-  const [categoryData, setCategoryData] = useState([]);
-  const [productData, setProductData] = useState([]);
-  const [categoryBanner, setCategoryBanner] = useState("");
+  const [categoryData, setCategoryData] = useState<Category[]>([]);
+  const [productData, setProductData] = useState<Product[]>([]);
+  const [categoryBanner, setCategoryBanner] = useState<string>("");
 
   useEffect(() => {
     fetch("/data/categoryData.json")
       .then((response) => response.json())
       .then((data) => {
         setCategoryData(data);
-        const category = data.find((cat) => cat.slug === categoryName);
+        const category = data.find(
+          (cat: Category) => cat.slug === categoryName
+        );
         if (category) {
           setCategoryBanner(category.image);
         }
       });
-  }, []);
+  }, [categoryName]); // Added categoryName as a dependency
 
   useEffect(() => {
     fetch("/data/productData.json")
@@ -33,22 +60,20 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
         setProductData(data);
       });
   }, []);
-  function filterProductsByCategorySlug(categorySlug) {
+
+  function filterProductsByCategorySlug(categorySlug: string): Product[] {
     return productData.filter(
-      (product) => product.categorySlug === categorySlug
+      (product: Product) => product.categorySlug === categorySlug
     );
   }
 
   // Example usage
-  const selectedCategorySlug = categoryName; // This could come from user selection
-  const filteredProducts = filterProductsByCategorySlug(selectedCategorySlug);
-  console.log(filteredProducts);
+  const filteredProducts = filterProductsByCategorySlug(categoryName);
+
   return (
     <div>
-      {/* <h1>Category: {categoryName}</h1> */}
-      {/* Render the content for the dynamic category */}
       {categoryBanner && (
-        <div className="w-full ">
+        <div className="w-full">
           <Image
             src={categoryBanner}
             alt={`Banner for ${categoryName}`}
@@ -58,9 +83,23 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
           />
         </div>
       )}
-      {filteredProducts.map((product) => (
-        <div key={product.id}></div>
-      ))}
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product) => (
+          <div key={product.id}>
+            <h2>{product.name}</h2>
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={300} // Adjust width as needed
+              height={200} // Adjust height as needed
+            />
+            <p>{product.description}</p>
+            <p>Price: ${product.price}</p>
+          </div>
+        ))
+      ) : (
+        <p>No products found in this category.</p>
+      )}
     </div>
   );
 };
