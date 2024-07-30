@@ -9,7 +9,7 @@ interface PageProps {
   };
 }
 
-const Page = ({ params: { categoryName } }) => {
+const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
   const [categoryData, setCategoryData] = useState([]);
   const [productData, setProductData] = useState([]);
   const [categoryBanner, setCategoryBanner] = useState("");
