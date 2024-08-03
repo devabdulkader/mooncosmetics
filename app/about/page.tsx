@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const page = () => {
   const services = [
     {
@@ -19,52 +21,29 @@ const page = () => {
 
   return (
     <section>
-      <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-[#edf7fa]">
-        <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
-          <svg
-            className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
-            viewBox="0 0 100 100"
-            fill="currentColor"
-            preserveAspectRatio="none slice"
-          >
-            <path d="M50 0H100L50 100H0L50 0Z" />
-          </svg>
-          {/* <img
-            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            alt=""
-          /> */}
-        </div>
-        <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
-          <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-            <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Brand new
+      <header>
+        {/* Hero Container */}
+        <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+          {/* Component */}
+          <div className="mx-auto mb-8 w-full max-w-3xl text-center md:mb-12 lg:mb-16">
+            {/* Hero Title */}
+            <h1 className="mb-4 text-4xl font-bold md:text-6xl">
+              The Website You Want Without The Dev Time.
+            </h1>
+            <p className="mx-auto mb-5 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-6 lg:mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis, lectus
             </p>
-            <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Everything you
-              <br className="hidden md:block" />
-              can imagine{" "}
-              <span className="inline-block text-deep-purple-accent-400">
-                is real
-              </span>
-            </h2>
-            <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae. explicabo.
-            </p>
-            <div className="flex items-center">
-              <a
-                href="/"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white bg-black transition duration-200 rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Get in touch with us
-              </a>
-            </div>
+            {/* Hero Button */}
           </div>
+          {/* Hero Image */}
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
+            alt=""
+            className="inline-block max-h-[512px] w-full object-cover"
+          />
         </div>
-      </div>
-
+      </header>
       <section>
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
@@ -86,11 +65,81 @@ const page = () => {
               ))}
             </div>
             <div className="max-w-5xl">
-              {/* <img
+              <img
                 src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6488257b75d6a7b950248536_Group%2048113.svg"
                 alt=""
                 className="mt-16 inline-block"
-              /> */}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        {/* Container */}
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+          {/* Component */}
+          <div className="flex flex-col gap-8 sm:gap-20 lg:flex-row-reverse lg:items-center">
+            {/* Item */}
+            <div className="lg:w-1/2">
+              {/* Title */}
+              <h2 className="mb-4 max-w-3xl text-3xl font-bold md:text-5xl">
+                Understand sales performance better
+              </h2>
+              <p className="mb-6 max-w-lg text-sm text-gray-500 sm:text-base md:mb-10 lg:mb-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                aliquam, purus sit amet luctus venenatis, lectus
+              </p>
+              <div className="mb-12 mt-12 h-0 w-40 border [border-top-style:solid]"></div>
+              {/* List */}
+              <ul className="flex flex-col">
+                <li className="mb-2 flex items-center">
+                  <img
+                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
+                    alt=""
+                    className="mr-2 inline-block h-4 w-4"
+                  />
+                  <p className="text-gray-500 text-sm sm:text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                  </p>
+                </li>
+                <li className="mb-2 flex items-center">
+                  <img
+                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
+                    alt=""
+                    className="mr-2 inline-block h-4 w-4"
+                  />
+                  <p className="text-gray-500 text-sm sm:text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                  </p>
+                </li>
+                <li className="mb-2 flex items-center">
+                  <img
+                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
+                    alt=""
+                    className="mr-2 inline-block h-4 w-4"
+                  />
+                  <p className="text-gray-500 text-sm sm:text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                  </p>
+                </li>
+                <li className="flex items-center">
+                  <img
+                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
+                    alt=""
+                    className="mr-2 inline-block h-4 w-4"
+                  />
+                  <p className="text-gray-500 max-[479px]:text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                  </p>
+                </li>
+              </ul>
+            </div>
+            {/* Item */}
+            <div className="lg:w-1/2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
+                alt=""
+              />
             </div>
           </div>
         </div>
