@@ -59,16 +59,15 @@ const Categories = () => {
       <h2 className="text-2xl raleway-medium text-center uppercase py-5 lg:pt-10 lg:py-0">
         All of Our Categories
       </h2>
-      <section className="container mx-auto grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10 lg:p-10">
+      <section className="container mx-auto grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10 lg:p-10 ">
         {categories.map((category, index) => (
           <Link key={index} href={`/shop/category/${category.slug}`}>
-            <div className="relative border flex flex-col group cursor-pointer">
+            <div className="relative border flex flex-col group cursor-pointer lg:w-80 mx-auto">
               <div className="w-full  relative overflow-hidden">
                 <Image
                   src={category.image}
                   alt={category.title}
-                  layout="responsive"
-                  className="h-full w-full"
+                  className="h-full w-full "
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-center justify-center">
                   <p className="text-center uppercase text-white py-2 lg:py-4 lg:px-10 text-sm lg:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">

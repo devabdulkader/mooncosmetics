@@ -17,6 +17,9 @@ const offers = [
   { image: offer1, title: "Special Offer 1" },
   { image: offer2, title: "Special Offer 2" },
   { image: offer3, title: "Special Offer 3" },
+  { image: offer1, title: "Special Offer 1" },
+  { image: offer2, title: "Special Offer 2" },
+  { image: offer3, title: "Special Offer 3" },
 ];
 
 const OurOffers = () => {
@@ -27,8 +30,18 @@ const OurOffers = () => {
       </h2>
       <section className="">
         <Swiper
-          spaceBetween={10}
-          slidesPerView={1}
+          slidesPerView={1} // Show 3 slides per view
+          breakpoints={{
+            // Define breakpoints for responsive behavior
+            640: {
+              slidesPerView: 2, // 2 slides for screens >= 640px
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3, // 3 slides for screens >= 768px
+              spaceBetween: 40,
+            },
+          }}
           navigation={true}
           autoplay={{
             delay: 2000,
@@ -41,8 +54,8 @@ const OurOffers = () => {
         >
           {offers.map((offer, index) => (
             <SwiperSlide key={index}>
-              <div className="container mx-auto p-10">
-                <div className="w-full  lg:h-[80vh]">
+              <div className="container mx-auto lg:p-10 flex justify-center items-center">
+                <div className="w-full  lg:h-[65vh]">
                   <Image
                     src={offer.image}
                     alt={offer.title}
