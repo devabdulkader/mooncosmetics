@@ -66,7 +66,7 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
           </div>
         ))
       ) : (
-        <p>No products found in this category.</p>
+        <p>Sorry! No products found in this category.</p>
       )}
     </div>
   );
