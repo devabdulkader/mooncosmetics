@@ -20,20 +20,13 @@ export interface ICategory {
   buttonText: string;
 }
 
+// types.ts
+
 export interface IProduct {
-  id: string;
   name: string;
-  categorySlug: string;
-  brand: string;
-  description: string;
-  price: number;
-  quantity: number;
   image: string;
-  popularity: number;
-  trendingStatus: boolean;
-  availability: boolean;
-  createdAt: string;
-  updatedAt: string;
+  category: string; // category slug in lowercase with hyphens
+  subcategory?: string | null; // subcategory slug, optional
 }
 
 // Define the type for the component props

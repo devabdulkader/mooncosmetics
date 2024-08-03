@@ -62,7 +62,7 @@ const Categories = () => {
       <section className="container mx-auto grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10 lg:p-10 ">
         {categories.map((category, index) => (
           <Link key={index} href={`/shop/category/${category.slug}`}>
-            <div className="relative border flex flex-col group cursor-pointer lg:w-80 mx-auto">
+            <div className="relative border flex flex-col group cursor-pointer lg:w-96 mx-auto">
               <div className="w-full  relative overflow-hidden">
                 <Image
                   src={category.image}

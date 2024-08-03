@@ -33,7 +33,7 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
 
   function filterProductsByCategorySlug(categorySlug: string): IProduct[] {
     return productData.filter(
-      (product: IProduct) => product.categorySlug === categorySlug
+      (product: IProduct) => product.category === categorySlug
     );
   }
 
@@ -54,8 +54,8 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
         </div>
       )}
       {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
-          <div key={product.id}>
+        filteredProducts.map((product: IProduct, index: number) => (
+          <div key={index}>
             <h2>{product.name}</h2>
             <Image
               src={product.image}
@@ -63,8 +63,6 @@ const Page: React.FC<PageProps> = ({ params: { categoryName } }) => {
               width={300} // Adjust width as needed
               height={200} // Adjust height as needed
             />
-            <p>{product.description}</p>
-            <p>Price: ${product.price}</p>
           </div>
         ))
       ) : (

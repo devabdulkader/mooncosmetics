@@ -1,137 +1,97 @@
 "use client";
+import Link from "next/link";
+import CustomLink from "./CustomLink";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { INavItem } from "@/types";
 import { useEffect, useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
-import CustomLink from "./CustomLink";
 import { MdOutlineKeyboardArrowRight, MdClose } from "react-icons/md";
-import Link from "next/link";
+import Logo from "./Logo";
+import getNavigationData from "@/lib/getNavigationData";
 
 const MobileNav = () => {
-  let [isOpen, setOpen] = useState(false);
+  const [navigationData, setNavigationData] = useState<INavItem[]>([]);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
+    null
+  );
+  const [isOpen, setOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchNavigationData = async () => {
+      try {
+        const data = await getNavigationData();
+        setNavigationData(data);
+      } catch (error) {
+        console.error("Error fetching navigation data:", error);
+      }
+    };
+
+    fetchNavigationData();
+  }, []);
+  const handleMouseEnter = (index: number) => {
+    setOpenDropdownIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenDropdownIndex(null);
+  };
 
   return (
-    <>
-      <div className="  lg:hidden flex ">
+    <nav className="lg:hidden sticky top-0 bg-white z-50 shadow-sm">
+      <div className="flex justify-between items-center px-10 py-2">
+        <Logo />
         <FaBarsStaggered
-          onClick={() => setOpen(!isOpen)}
           size={28}
-          className="text-black font-bold"
+          onClick={() => setOpen(true)}
+          className="cursor-pointer"
         />
       </div>
       {isOpen && (
-        <div className=" overflow-hidden z-20">
-          <div className=" fixed overflow-hidden h-screen w-screen top-0 md:top-[-24px] right-0 left-0   z-50  bg-white text-black px-4 py-4 transition-all ease-in duration-500">
-            <div className="flex justify-between items-center pb-4">
-              <div>
-                <MdClose size={28} onClick={() => setOpen(false)} />
-              </div>
-            </div>
-            <div className=" w-full h-full  flex  flex-col justify-between gap-60 ">
-              <ul className=" text-black gap-4 flex flex-col text-lg pt-2">
-                <li>
-                  <div className=" dropdown dropdown-hover w-full">
-                    <div
-                      tabIndex={0}
-                      role="button"
-                      className="flex justify-between items-center px-2 font-semibold "
-                    >
-                      <div>Services</div>
-                      <div>
-                        <MdOutlineKeyboardArrowRight size={30} />
-                      </div>
-                    </div>
-                    <ul
-                      tabIndex={0}
-                      className="dropdown-content z-[1] menu text-lg p-2 shadow bg-white rounded-lg w-full"
-                    >
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/services/ui-ux-design">
-                          UI UX Design
-                        </CustomLink>
-                      </li>
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/services/web-design-development">
-                          Web Design Development
-                        </CustomLink>
-                      </li>
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/services/graphics-motion-design">
-                          Graphics Motion Design
-                        </CustomLink>
-                      </li>
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/services/video-editing">
-                          Video Editing
-                        </CustomLink>
-                      </li>
-                      <li>
-                        <CustomLink path="/services/digital-marketing">
-                          Digital Marketing
-                        </CustomLink>
-                      </li>
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/services/content-writing">
-                          Content Writing
-                        </CustomLink>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li onClick={() => setOpen(false)}>
-                  <CustomLink path="/ui-ux-design">UI UX Design</CustomLink>
-                </li>
-                <li onClick={() => setOpen(false)}>
-                  <CustomLink path="/about-us">About Us</CustomLink>
-                </li>
-                <li>
-                  <div className="dropdown dropdown-hover w-full">
-                    <div
-                      tabIndex={0}
-                      role="button"
-                      className=" flex justify-between items-center px-2 font-semibold "
-                    >
-                      <p>Resources</p>
-                      <p>
-                        <MdOutlineKeyboardArrowRight size={30} />
-                      </p>
-                    </div>
-                    <ul
-                      tabIndex={0}
-                      className="dropdown-content z-[1] menu text-lg p-2 shadow bg-white rounded-lg w-full"
-                    >
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/case-studies">
-                          Case Studies
-                        </CustomLink>
-                      </li>
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/blogs">Articles</CustomLink>
-                      </li>
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/contact-us">Contact Us</CustomLink>
-                      </li>
-                      <li onClick={() => setOpen(false)}>
-                        <CustomLink path="/career">Career</CustomLink>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-              <div onClick={() => setOpen(false)} className="h-full w-full ">
-                <Link
-                  target="black"
-                  href="https://calendly.com/zorgitgroup/15min"
-                >
-                  <button className="rounded-xl font-normal text-white bg-red-600 hover:bg-red-700 h-12 w-full   text-md  duration-300 ">
-                    {" "}
-                    Schedule a Meeting
-                  </button>
-                </Link>
-              </div>
-            </div>
+        <div className="px-10 fixed top-0 left-0 right-0 bg-white z-50 h-screen">
+          <div className="flex justify-between items-center py-2 ">
+            <Logo />
+            <MdClose
+              size={28}
+              onClick={() => setOpen(false)}
+              className="cursor-pointer"
+            />
           </div>
+          <ul className="flex flex-col gap-4 mt-4">
+            {navigationData.map((navItem, index) => (
+              <li
+                key={index}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {navItem.dropdown ? (
+                  <div className="flex items-center justify-between text-md cursor-pointer">
+                    <CustomLink path={navItem.path}>{navItem.title}</CustomLink>
+                    <MdOutlineKeyboardArrowDown size={24} />
+                  </div>
+                ) : (
+                  <CustomLink path={navItem.path}>{navItem.title}</CustomLink>
+                )}
+                {navItem.dropdown && openDropdownIndex === index && (
+                  <ul className="shadow bg-white w-full z-10 mt-3">
+                    {navItem.items?.map((subItem, subIndex) => (
+                      <li
+                        key={subIndex}
+                        className="hover:bg-green-200 px-5 py-2"
+                      >
+                        <CustomLink path={`/shop/category${subItem.path}`}>
+                          {subItem.title}
+                        </CustomLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
-    </>
+    </nav>
   );
 };
 
