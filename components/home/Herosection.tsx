@@ -37,10 +37,10 @@ const herosection = () => {
       {/* Overlay that covers the video */}
       <div className="absolute inset-0 bg-black opacity-70 transition-opacity duration-300 group-hover:opacity-0 z-10"></div>
       {/* Video component */}
-      <Video
+      {/* <Video
         src={video1}
         className="w-full relative left-0  group-hover:z-30 cursor-pointer"
-      />
+      /> */}
     </div>
   );
 };
