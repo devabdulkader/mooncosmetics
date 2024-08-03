@@ -56,7 +56,7 @@ const categories: ICategory[] = [
 const Categories = () => {
   return (
     <div className="bg-white">
-      <h2 className="text-2xl raleway-medium text-center uppercase py-5 lg:pt-10 lg:py-0">
+      <h2 className="text-2xl raleway-medium text-center uppercase py-5 lg:pt-10 lg:py-0 raleway-medium lg:text-3xl">
         All of Our Categories
       </h2>
       <section className="container mx-auto grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-10 lg:p-10 ">
