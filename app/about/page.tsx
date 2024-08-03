@@ -29,11 +29,11 @@ const page = () => {
           >
             <path d="M50 0H100L50 100H0L50 0Z" />
           </svg>
-          <img
+          {/* <img
             className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
             src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
             alt=""
-          />
+          /> */}
         </div>
         <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
           <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
@@ -86,11 +86,11 @@ const page = () => {
               ))}
             </div>
             <div className="max-w-5xl">
-              <img
+              {/* <img
                 src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6488257b75d6a7b950248536_Group%2048113.svg"
                 alt=""
                 className="mt-16 inline-block"
-              />
+              /> */}
             </div>
           </div>
         </div>
