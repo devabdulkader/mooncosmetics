@@ -28,7 +28,7 @@ const OurOffers = () => {
       <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium text-center">
         Our Special Offers
       </h1>
-      <section className="">
+      <section className="px-5">
         <Swiper
           slidesPerView={1} // Show 3 slides per view
           breakpoints={{

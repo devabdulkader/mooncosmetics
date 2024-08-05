@@ -1,35 +1,100 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/* Raleway Font Classes */
+.raleway-thin {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
 }
-/* body {
-  background-color: #edf7fa;
-} */
-.work-sans-regular {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+
+.raleway-extra-light {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
 }
+
+.raleway-light {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
 .raleway-regular {
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
 }
+
 .raleway-medium {
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+.raleway-semi-bold {
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
 }
+
 .raleway-bold {
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 700;
 }
+
+.raleway-extra-bold {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+.raleway-black {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+/* Work Sans Font Classes */
+.work-sans-thin {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 100;
+}
+
+.work-sans-extra-light {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
+}
+
+.work-sans-light {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+
+.work-sans-regular {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+.work-sans-medium {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+
+.work-sans-semi-bold {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+}
+
+.work-sans-bold {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+}
+
+.work-sans-extra-bold {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+}
+
+.work-sans-black {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+}
+
 .svgText {
   fill: rgb(255, 255, 255);
   height: 200px;

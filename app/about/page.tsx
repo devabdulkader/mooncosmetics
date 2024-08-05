@@ -36,19 +36,19 @@ const page = () => {
 
   return (
     <section>
-      <header className="relative z-20">
+      <header className="relative z-20 ">
         {/* Hero Container */}
-        <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <div className="mx-auto max-w-7xl px-5 py-10 md:px-10 md:py-20">
           {/* Component */}
           <div className="mx-auto mb-8 w-full max-w-3xl text-center md:mb-12 lg:mb-16">
             {/* Hero Title */}
             <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-bold">
               The Website You Want Without The Dev Time.
             </h1>
-            <p className="mx-auto mb-5 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-6 lg:mb-8">
+            {/* <p className="mx-auto mb-5 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-6 lg:mb-8 work-sans-regular">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam, purus sit amet luctus venenatis, lectus
-            </p>
+            </p> */}
             {/* Hero Button */}
           </div>
           {/* Hero Image */}
@@ -59,7 +59,7 @@ const page = () => {
           /> */}
           <video
             src="/moon/videos/about-us.mp4"
-            className="inline-block  w-full  relative left-0 cursor-pointer   h-full"
+            className="  w-full  relative left-0 cursor-pointer h-full"
             autoPlay
             muted
             loop
@@ -68,14 +68,14 @@ const page = () => {
       </header>
       <section className="bg-blue-600 top relative">
         {/* Container */}
-        <div className="h-60 w-full bg-blue-600 absolute -top-60 z-10"></div>
-        <div className=" mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <div className="h-60 w-full bg-blue-600 absolute -top-60 z-10 hidden lg:block"></div>
+        <div className=" mx-auto w-full max-w-7xl px-5 pb-10 md:px-10 ">
           <div className="grid  lg:grid-cols-2  bg-white">
             <div className="flex flex-col gap-5  border border-solid border-black p-10 sm:p-20">
               <h2 className="text-3xl font-bold md:text-5xl raleway-bold">
                 Our Story
               </h2>
-              <p className="text-sm text-gray-500 sm:text-base">
+              <p className="text-sm text-gray-500 sm:text-base work-sans-regular">
                 Aliquet risus feugiat in ante metus. Arcu dui vivamus arcu felis
                 bibendum ut. Vestibulum lorem sed risus ultricies tristique
                 nulla. Vitae et leo duis ut diam quam. Bibendum arcu vitae
@@ -105,14 +105,16 @@ const page = () => {
           </h2>
           {/* Content */}
           <div className="flex flex-col items-center justify-center bg-contain bg-center pt-10 bg-[url('https://assets.website-files.com/6458c625291a94a195e6cf3a/648825fca218588cb636c341_Group%2048114.png')]">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-10">
               {services.map((service, index) => (
                 <div
                   key={index}
                   className="rounded-md border border-solid border-gray-300 bg-white p-6 text-black"
                 >
-                  <h5 className="mb-2 text-xl font-bold">{service.title}</h5>
-                  <p className="text-sm">{service.description}</p>
+                  <h5 className="mb-2 text-xl raleway-bold">{service.title}</h5>
+                  <p className="text-sm work-sans-regular">
+                    {service.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -121,29 +123,29 @@ const page = () => {
       </section>
       <section>
         {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-5 md:px-10 md:py-20">
           {/* Component */}
           <div className="flex flex-col gap-8 sm:gap-20 lg:flex-row-reverse lg:items-center">
             {/* Item */}
             <div className="lg:w-1/2">
               {/* Title */}
-              <h2 className="mb-4 max-w-3xl text-3xl font-bold md:text-5xl">
+              <h2 className="mb-4 max-w-3xl text-3xl raleway-bold md:text-5xl">
                 Understand sales performance better
               </h2>
-              <p className="mb-6 max-w-lg text-sm text-gray-500 sm:text-base md:mb-10 lg:mb-12">
+              <p className="mb-6 max-w-lg text-sm text-gray-500 sm:text-base md:mb-10 lg:mb-12 work-sans-regular">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
                 aliquam, purus sit amet luctus venenatis, lectus
               </p>
               <div className="mb-12 mt-12 h-0 w-40 border [border-top-style:solid]"></div>
               {/* List */}
-              <ul className="flex flex-col">
+              <ul className="flex flex-col  work-sans-regular">
                 <li className="mb-2 flex items-center">
                   <img
                     src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
                     alt=""
                     className="mr-2 inline-block h-4 w-4"
                   />
-                  <p className="text-gray-500 text-sm sm:text-base">
+                  <p className="text-gray-500 text-sm sm:text-base ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing
                   </p>
                 </li>

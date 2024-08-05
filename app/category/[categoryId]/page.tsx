@@ -3,6 +3,7 @@ import { ICategory, IProduct } from "@/types";
 import getCategoriesData from "@/lib/getCategoriesData";
 import getProductsData from "@/lib/getProductsData";
 import Image from "next/image";
+import { FaCartShopping } from "react-icons/fa6";
 
 interface CategoryPageProps {
   params: {
@@ -31,32 +32,45 @@ const Page: NextPage<CategoryPageProps> = async ({ params }) => {
 
   return (
     <div>
-      <div className="relative h-96">
+      <div className="relative h-auto w-full">
         <Image
           src={category.banner}
           alt={category.title}
           width={300}
           height={300}
+          layout="responsive"
           className="h-full w-full"
         />
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-5 bg-gray-100 px-10 py-2 rounded-full">
-          <p className="text-center">{category.breadcrumb}</p>
+        <div className="absolute -bottom-5 flex justify-center items-center w-full">
+          <p className="text-center text-white bg-slate-800 px-5 rounded-full py-2">
+            {category.breadcrumb}
+          </p>
         </div>
       </div>
 
       {/* Display filtered products */}
-      <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 px-5 xl:grid-cols-5 md:px-10 xl:px-20 py-10">
+      <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 px-2 xl:grid-cols-5 md:px-10 xl:px-20 py-10">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <div key={product.name}>
-              <div className="border h-60 lg:h-96 p-4 relative">
+            <div key={product.name} className="relative group">
+              <div className="border h-60 lg:h-96 p-4 relative overflow-hidden group">
                 <Image
                   src={product.image}
                   alt={product.name}
                   width={300}
                   height={300}
-                  className="w-full h-full"
+                  className="w-full h-full object-cover"
                 />
+                {/* Inset overlay */}
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Centered button shown on hover */}
+                <div className="absolute inset-0 flex justify-center items-center">
+                  <button className="bg-white text-sm z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 py-2 flex items-center">
+                    Buy Now
+                    {/* Cart Icon (SVG) */}
+                    <FaCartShopping className="text-orange-500 ml-2" />
+                  </button>
+                </div>
               </div>
               <h4 className="text-sm lg:text-[1rem] font-normal pt-3">
                 {product.name}

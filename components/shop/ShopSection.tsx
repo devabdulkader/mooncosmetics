@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import getProductsData from "@/lib/getProductsData"; // Adjust the path as necessary
 import { IProduct } from "@/types"; // Adjust the path as necessary
 import Image from "next/image";
+import { FaCartShopping } from "react-icons/fa6";
 
 interface ShopSectionProps {
   products: IProduct[]; // Accept products as a prop
@@ -77,7 +78,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
 
   return (
     <section>
-      <div className="mx-auto w-full px-5 py-6 md:px-10 md:py-14 bg-white">
+      <div className="mx-auto w-full px-2 py-6 md:px-10 md:py-14 bg-white">
         <div className="flex flex-col gap-12 ">
           <div className="grid gap-10 md:gap-12 lg:grid-cols-[max-content_1fr] ">
             {/* Filters */}
@@ -139,9 +140,11 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
             </div>
             {/* Show All Products */}
             <div className="w-full lg:border-l-[1px] lg:pl-5 pt-5">
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 lg:px-5">
+              <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 lg:px-5">
                 {displayedProducts.map((product) => (
-                  <div key={product.name}>
+                  <div key={product.name} className="relative group">
+                    {" "}
+                    {/* Add group class here */}
                     <div className="border h-60 lg:h-96 p-4 relative">
                       <Image
                         src={product.image}
@@ -150,6 +153,16 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                         height={300}
                         className="w-full h-full"
                       />
+                      {/* Inset overlay */}
+                      <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      {/* Centered button shown on hover */}
+                      <div className="absolute inset-0 flex justify-center items-center">
+                        <button className="bg-white text-sm z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 py-2 flex items-center">
+                          Buy Now
+                          {/* Cart Icon (SVG) */}
+                          <FaCartShopping className="text-orange-500 ml-2" />
+                        </button>
+                      </div>
                     </div>
                     <h4 className="text-sm lg:text-[1rem] font-normal pt-3">
                       {product.name}

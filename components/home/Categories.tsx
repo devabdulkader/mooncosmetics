@@ -10,7 +10,7 @@ const Categories = async () => {
   return (
     <section>
       <div className="mx-auto w-full max-w-7xl pt-10 md:px-10 ">
-        <h1 className="mb-14 text-4xl font-bold md:text-6xl raleway-medium text-center">
+        <h1 className="mb-4 lg:mb-14 text-4xl font-bold md:text-6xl raleway-medium text-center">
           All of Our Categories
         </h1>
         <section className=" w-full  grid grid-cols-2 lg:grid-cols-3 gap-3">
