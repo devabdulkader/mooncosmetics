@@ -13,7 +13,7 @@ const Categories = async () => {
         <h1 className="mb-4 lg:mb-14 text-4xl font-bold md:text-6xl raleway-medium text-center">
           All of Our Categories
         </h1>
-        <section className=" w-full  grid grid-cols-2 lg:grid-cols-3 gap-3">
+        <section className=" w-full  grid grid-cols-2 px-2 lg:px-0 lg:grid-cols-3 gap-3">
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
               <div className="relative border flex flex-col group cursor-pointer ">

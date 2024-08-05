@@ -78,7 +78,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
 
   return (
     <section>
-      <div className="mx-auto w-full px-2 py-6 md:px-10 md:py-14 bg-white">
+      <div className="mx-auto w-full px-2 pt-6 md:px-10 md:py-14 bg-white">
         <div className="flex flex-col gap-12 ">
           <div className="grid gap-10 md:gap-12 lg:grid-cols-[max-content_1fr] ">
             {/* Filters */}
@@ -88,7 +88,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                 method="get"
                 className="flex-col gap-6"
               >
-                <div className="mb-6 flex items-center justify-between py-4 [border-bottom:1px_solid_rgb(217,_217,_217)]">
+                <div className="lg:mb-6 flex items-center justify-between py-4 [border-bottom:1px_solid_rgb(217,_217,_217)]">
                   <h5 className="text-xl font-bold">Filters</h5>
                   <a href="#" onClick={handleClearAll} className="text-sm">
                     <p>Clear all</p>
@@ -139,7 +139,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
               </form>
             </div>
             {/* Show All Products */}
-            <div className="w-full lg:border-l-[1px] lg:pl-5 pt-5">
+            <div className="w-full lg:border-l-[1px] lg:pl-5 lg:pt-5">
               <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 lg:px-5">
                 {displayedProducts.map((product) => (
                   <div key={product.name} className="relative group">
@@ -172,7 +172,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
               </div>
               {/* Pagination */}
               {displayedProducts.length < products.length && (
-                <div className="flex justify-center mt-4">
+                <div className="flex justify-center my-4">
                   <button
                     onClick={handleNextPage}
                     className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
