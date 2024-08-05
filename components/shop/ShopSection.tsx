@@ -110,7 +110,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                     <a
                       href="#"
                       onClick={() => handleCategoryChange("all")}
-                      className={`flex gap-3 rounded-md p-3 font-semibold ${
+                      className={`flex gap-3 rounded-md p-2 font-semibold text-[1rem] ${
                         selectedCategory === "all"
                           ? "bg-[#e0e0e0]"
                           : "bg-[#f2f2f7]"
@@ -123,7 +123,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                         key={category.slug}
                         href="#"
                         onClick={() => handleCategoryChange(category.slug)}
-                        className={`flex gap-3 rounded-md p-3 font-semibold ${
+                        className={`flex gap-3 rounded-md p-2 text-[1rem]  ${
                           selectedCategory === category.slug
                             ? "bg-[#e0e0e0]"
                             : "bg-[#f2f2f7]"
@@ -134,22 +134,24 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                     ))}
                   </div>
                 </div>
-                <div className="mb-6 mt-6 h-px w-full bg-[#d9d9d9]"></div>
+                <div className=" mt-6 h-px w-full bg-[#d9d9d9]"></div>
               </form>
             </div>
             {/* Show All Products */}
-            <div className="w-full [lg:border-left:1px_solid_rgb(217,_217,_217)] lg:pl-5 pt-5">
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+            <div className="w-full lg:border-l-[1px] lg:pl-5 pt-5">
+              <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 lg:px-5">
                 {displayedProducts.map((product) => (
-                  <div key={product.name} className="border p-4 relative">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-auto"
-                    />
-                    <h4 className=" absolute top-5 text-lg font-semibold">
+                  <div key={product.name}>
+                    <div className="border h-60 lg:h-96 p-4 relative">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={300}
+                        height={300}
+                        className="w-full h-full"
+                      />
+                    </div>
+                    <h4 className="text-sm lg:text-[1rem] font-normal pt-3">
                       {product.name}
                     </h4>
                   </div>

@@ -70,7 +70,9 @@ const MobileNav = () => {
                     <MdOutlineKeyboardArrowDown size={24} />
                   </div>
                 ) : (
-                  <CustomLink path={navItem.path}>{navItem.title}</CustomLink>
+                  <CustomLink path={navItem.path} setOpen={setOpen}>
+                    {navItem.title}
+                  </CustomLink>
                 )}
                 {navItem.dropdown && openDropdownIndex === index && (
                   <ul className="shadow bg-white w-full z-10 mt-3">
@@ -79,7 +81,10 @@ const MobileNav = () => {
                         key={subIndex}
                         className="hover:bg-green-200 px-5 py-2"
                       >
-                        <CustomLink path={`/shop/category${subItem.path}`}>
+                        <CustomLink
+                          path={`/category${subItem.path}`}
+                          setOpen={setOpen}
+                        >
                           {subItem.title}
                         </CustomLink>
                       </li>

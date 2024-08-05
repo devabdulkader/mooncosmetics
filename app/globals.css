@@ -25,6 +25,11 @@
   font-optical-sizing: auto;
   font-weight: 600;
 }
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
 .svgText {
   fill: rgb(255, 255, 255);
   height: 200px;
@@ -42,4 +47,7 @@
 .group-hover .dropdown-content {
   opacity: 1;
   transform: translateY(0);
+}
+.active-class {
+  color: rgb(224, 20, 20);
 }

@@ -13,13 +13,15 @@ import award3 from "@/public/moon/Gallary/AWARD3.png";
 import { Navigation, Autoplay } from "swiper/modules";
 const GallerySlider = () => {
   return (
-    <div className="container mx-auto mt-10 bg-white">
+    <div className=" bg-white">
       <section>
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
           {/* Title */}
-          <h2 className="text-3xl font-bold md:text-5xl">Our Gallery</h2>
-          <p className="msm:text-base mb-8 mt-4 text-sm text-gray-500 md:mb-12 lg:mb-16">
+          <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium text-center">
+            Our Gallery
+          </h1>
+          <p className="msm:text-base mb-8 mt-4 text-sm text-gray-500 md:mb-12 lg:mb-16 mx-auto text-center">
             BEST TAX PAYER IN 2023 (KHULNA ZILLA) Chairman of the Moon Cosmetics
             has got Best Tax payer in Khulna District.
           </p>

@@ -7,15 +7,15 @@ import Image from "next/image";
 
 const Certification = () => {
   return (
-    <div className="container mx-auto mt-10  ">
+    <div className="container mx-auto ">
       <section>
         {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 ">
           {/* Title */}
           <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-            <h2 className="text-3xl font-bold md:text-5xl">
+            <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium text-center">
               Our Certification
-            </h2>
+            </h1>
             <p className="mx-auto mb-8 mt-4 text-gray-500 md:mb-12 lg:mb-16">
               Lorem ipsum dolor sit amet consectetur adipiscing
             </p>
@@ -101,12 +101,12 @@ const Certification = () => {
         </div>
       </section>
       {/* Container */}
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+      <div className="mx-auto w-full max-w-7xl px-5  md:px-10 ">
         {/* Title */}
-        <h2 className="mb-8 text-3xl font-bold md:text-5xl lg:mb-14">
+        <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium text-center">
           Our Achievement
-        </h2>
-        <p className="mb-8 max-w-lg text-sm text-gray-500 sm:text-base lg:mb-24">
+        </h1>
+        <p className="mb-8 max-w-lg text-sm text-gray-500 sm:text-base lg:mb-16 text-center mx-auto">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           varius enim in eros elementum tristique. Duis cursus, mi quis viverra
           ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
@@ -120,7 +120,9 @@ const Certification = () => {
           />
 
           <div className="flex flex-col gap-5 rounded-2xl border border-solid border-black p-10 sm:p-20">
-            <h2 className="text-3xl font-bold md:text-5xl">Our Mission</h2>
+            <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium ">
+              Our Mission
+            </h1>
             <p className="text-sm text-gray-500 sm:text-base">
               Aliquet risus feugiat in ante metus. Arcu dui vivamus arcu felis
               bibendum ut. Vestibulum lorem sed risus ultricies tristique nulla.

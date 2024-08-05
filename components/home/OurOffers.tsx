@@ -24,10 +24,10 @@ const offers = [
 
 const OurOffers = () => {
   return (
-    <div className="bg-white">
-      <h2 className="text-2xl raleway-medium text-center uppercase py-5 lg:pt-10 lg:py-0">
+    <div className="bg-white pt-14">
+      <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium text-center">
         Our Special Offers
-      </h2>
+      </h1>
       <section className="">
         <Swiper
           slidesPerView={1} // Show 3 slides per view

@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Herbal Oil",
+    "breadcrumb": "category/herbal-oil",
+    "slug": "herbal-oil",
+    "banner": "/moon/categoryBanner/banner-1.png",
+    "image": "/moon/category/category1.jpeg"
+  },
+  {
+    "title": "Hair Care",
+    "breadcrumb": "category/hair-care",
+    "slug": "hair-care",
+    "banner": "/moon/categoryBanner/banner-2.png",
+    "image": "/moon/category/category2.jpeg"
+  },
+  {
+    "title": "Winter Care",
+    "breadcrumb": "category/winter-care",
+    "slug": "winter-care",
+    "banner": "/moon/categoryBanner/banner-3.png",
+    "image": "/moon/category/category3.jpeg"
+  },
+  {
+    "title": "Color Cosmetics",
+    "breadcrumb": "category/color-cosmetics",
+    "slug": "color-cosmetics",
+    "banner": "/moon/categoryBanner/banner-4.png",
+    "image": "/moon/category/category4.jpeg"
+  },
+  {
+    "title": "Fragrances",
+    "breadcrumb": "category/fragrances",
+    "slug": "fragrances",
+    "banner": "/moon/categoryBanner/banner-5.png",
+    "image": "/moon/category/category5.jpeg"
+  },
+  {
+    "title": "Skin Care",
+    "breadcrumb": "category/skin-care",
+    "slug": "skin-care",
+    "banner": "/moon/categoryBanner/banner-6.png",
+    "image": "/moon/category/category6.jpeg"
+  }
+]

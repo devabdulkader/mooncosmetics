@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 export interface INavSubItem {
   title: string;
@@ -16,8 +15,14 @@ export interface ICategory {
   title: string;
   breadcrumb: string;
   slug: string;
-  image: StaticImageData;
-  buttonText: string;
+  image: string;
+  banner: string;
+}
+export interface IIdCategory {
+  id: string;
+  name: string;
+  description?: string; // Optional properties
+  // Add other relevant fields
 }
 
 // types.ts
@@ -32,7 +37,7 @@ export interface IProduct {
 // Define the type for the component props
 export interface PageProps {
   params: {
-    categoryName: string;
+    categoryId: string;
   };
 }
 
@@ -40,4 +45,5 @@ export interface CustomLinkProps {
   path: string;
   prefetch?: boolean;
   children: ReactNode;
+  setOpen?: (open: boolean) => void; // Add setOpen prop
 }
