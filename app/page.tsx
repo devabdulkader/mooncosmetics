@@ -5,6 +5,7 @@ import Categories from "@/components/home/Categories";
 import Certification from "@/components/home/Certification";
 import GallerySlider from "@/components/home/GallerySlider";
 import LocationMap from "@/components/home/LocationMap";
+import FAQ from "@/components/common/FAQ";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Categories />
       <Certification />
       <GallerySlider />
+      <FAQ />
       <LocationMap />
     </main>
   );

@@ -41,6 +41,11 @@
     ]
   },
   {
+    "title": "Featured Products",
+    "path": "/featured",
+    "dropdown": false
+  },
+  {
     "title": "About Us",
     "path": "/about",
     "dropdown": false

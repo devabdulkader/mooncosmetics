@@ -1,3 +1,5 @@
+import AboutDetails from "@/components/about/AboutDetails";
+import FAQ from "@/components/common/FAQ";
 import Image from "next/image";
 
 const page = () => {
@@ -88,7 +90,7 @@ const page = () => {
                 pellentesque dignissim enim sit amet venenatis.
               </p>
             </div>
-            <img
+            <Image
               src="https://assets.website-files.com/6458c625291a94a195e6cf3a/64b7a30c42421ae3cbe5abb9_about%20image.svg"
               alt=""
               className="inline-block h-full w-full  object-cover"
@@ -96,6 +98,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      <AboutDetails />
       <section>
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
@@ -121,76 +124,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section>
-        {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5 md:px-10 md:py-20">
-          {/* Component */}
-          <div className="flex flex-col gap-8 sm:gap-20 lg:flex-row-reverse lg:items-center">
-            {/* Item */}
-            <div className="lg:w-1/2">
-              {/* Title */}
-              <h2 className="mb-4 max-w-3xl text-3xl raleway-bold md:text-5xl">
-                Understand sales performance better
-              </h2>
-              <p className="mb-6 max-w-lg text-sm text-gray-500 sm:text-base md:mb-10 lg:mb-12 work-sans-regular">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam, purus sit amet luctus venenatis, lectus
-              </p>
-              <div className="mb-12 mt-12 h-0 w-40 border [border-top-style:solid]"></div>
-              {/* List */}
-              <ul className="flex flex-col  work-sans-regular">
-                <li className="mb-2 flex items-center">
-                  <img
-                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
-                    alt=""
-                    className="mr-2 inline-block h-4 w-4"
-                  />
-                  <p className="text-gray-500 text-sm sm:text-base ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                  </p>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img
-                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
-                    alt=""
-                    className="mr-2 inline-block h-4 w-4"
-                  />
-                  <p className="text-gray-500 text-sm sm:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                  </p>
-                </li>
-                <li className="mb-2 flex items-center">
-                  <img
-                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
-                    alt=""
-                    className="mr-2 inline-block h-4 w-4"
-                  />
-                  <p className="text-gray-500 text-sm sm:text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                  </p>
-                </li>
-                <li className="flex items-center">
-                  <img
-                    src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94a84be6cf60_check-mark.svg"
-                    alt=""
-                    className="mr-2 inline-block h-4 w-4"
-                  />
-                  <p className="text-gray-500 max-[479px]:text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                  </p>
-                </li>
-              </ul>
-            </div>
-            {/* Item */}
-            <div className="lg:w-1/2">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <FAQ />
     </section>
   );
 };
