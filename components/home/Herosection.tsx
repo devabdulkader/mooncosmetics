@@ -1,8 +1,3 @@
-import Image from "next/image";
-import banner from "@/public/hero/banner.png";
-import SocialIcons from "../shared/header/SocialIcons";
-import video1 from "@/videos/welcome-moon.mp4";
-
 const herosection = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-row w-full overflow-hidden lg:h-screen  relative group">
