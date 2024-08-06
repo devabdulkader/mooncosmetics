@@ -9,7 +9,7 @@ const LocationMap = () => {
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
           <div className="relative mb-5">
             <MotionContent>
-              <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+              <h1 className="mb-4 text-3xl   md:text-6xl raleway-bold text-center">
                 Our Location
               </h1>
             </MotionContent>

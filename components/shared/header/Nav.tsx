@@ -34,7 +34,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="justify-between fixed top-0 z-50 items-center hidden lg:flex h-14 bg-[#faf6f7] w-full px-10 shadow-sm">
+    <nav className="justify-between fixed top-0 z-50 items-center hidden lg:flex h-16 bg-[#faf6f7] w-full px-10 nav-shadow">
       <div className="w-96">
         <Logo />
       </div>
@@ -70,6 +70,11 @@ const Nav = () => {
             )}
           </li>
         ))}
+        <CustomLink path={`/shop`}>
+          <li className="bg-orange-400 py-2 px-10 text-white rounded-full ">
+            E-Commerce Shop
+          </li>
+        </CustomLink>
       </ul>
     </nav>
   );

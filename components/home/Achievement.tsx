@@ -12,7 +12,7 @@ const Achievement = () => {
         {/* Title */}
         <div className="relative">
           <MotionContent>
-            <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+            <h1 className="mb-4 text-3xl md:text-6xl raleway-bold text-center">
               Our Achievements
             </h1>
           </MotionContent>

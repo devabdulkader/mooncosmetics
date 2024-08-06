@@ -14,7 +14,7 @@ const Categories = async () => {
       <div className="mx-auto w-full max-w-7xl pt-10 md:px-10 ">
         <div className="relative">
           <MotionContent>
-            <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+            <h1 className="mb-4 text-3xl  md:text-6xl raleway-bold text-center">
               All Categories
             </h1>
           </MotionContent>

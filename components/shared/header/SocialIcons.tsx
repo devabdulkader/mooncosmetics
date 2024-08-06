@@ -44,7 +44,7 @@ const SocialIcons = () => {
         {socialIcons.map((socialIcon, index) => (
           <div
             key={index}
-            className={`flex h-8 w-8  rounded-full mr-3  justify-start items-center transition-colors duration-300 ${socialIcon.textColor} ${socialIcon.hoverBgColor} hover:text-white`}
+            className={`flex h-8 w-8  rounded-full mr-3  justify-center items-center transition-colors duration-300 ${socialIcon.textColor} ${socialIcon.hoverBgColor} hover:text-white`}
           >
             <socialIcon.Icon className="cursor-pointer text-[14px]" />
             <p className="hidden">{socialIcon.text}</p>

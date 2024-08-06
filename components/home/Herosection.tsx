@@ -6,7 +6,7 @@ const herosection = () => {
 
       <video
         src="/moon/videos/welcome-moon.mp4"
-        className="w-full relative left-0 cursor-pointer object-cover  h-full"
+        className="w-full relative left-0 cursor-pointer object-fill h-full "
         autoPlay
         muted
         loop

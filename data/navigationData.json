@@ -4,11 +4,7 @@
     "path": "/",
     "dropdown": false
   },
-  {
-    "title": "Shop",
-    "path": "/shop",
-    "dropdown": false
-  },
+
   {
     "title": "Product Category",
     "path": "#",

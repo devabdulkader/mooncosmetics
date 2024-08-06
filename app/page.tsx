@@ -7,18 +7,22 @@ import Gallery from "@/components/home/Gallery";
 import LocationMap from "@/components/home/LocationMap";
 import FAQ from "@/components/common/FAQ";
 import Achievement from "@/components/home/Achievement";
+import LiveChat from "@/components/button/LiveChat";
 
 export default function Home() {
   return (
-    <main className="">
-      <Herosection />
-      <OurOffers />
-      <Categories />
-      <Certification />
-      <Achievement />
-      <Gallery />
-      <FAQ />
-      <LocationMap />
-    </main>
+    <div>
+      <main className="">
+        <Herosection />
+        <OurOffers />
+        <Categories />
+        <Certification />
+        <Achievement />
+        <Gallery />
+        <FAQ />
+        <LocationMap />
+        <LiveChat />
+      </main>
+    </div>
   );
 }

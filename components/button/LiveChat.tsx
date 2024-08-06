@@ -2,7 +2,7 @@ import React from "react";
 
 const LiveChat = () => {
   return (
-    <div className="fixed bottom-6 left-10 z-20 flex justify-center items-center ">
+    <div className="fixed bottom-6  left-12 z-20 flex justify-center items-center ">
       <a
         href="https://wa.me/1947587061?"
         target="_blank"

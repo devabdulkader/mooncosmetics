@@ -29,7 +29,7 @@ const OurOffers = () => {
     <div className="bg-white pt-8 lg:pt-14">
       <div className="relative mb-5">
         <MotionContent>
-          <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+          <h1 className="mb-4 text-3xl  md:text-6xl raleway-bold text-center">
             Our Special Offers
           </h1>
         </MotionContent>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { IFeaturedProduct } from "@/types"; // Adjust the import path as necessary
 
@@ -10,69 +10,58 @@ interface FeaturedProductsProps {
 const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
   featuredProducts,
 }) => {
-  const [selectedProduct, setSelectedProduct] = useState<IFeaturedProduct>(
-    featuredProducts[0]
-  );
-
-  const handleButtonClick = (product: IFeaturedProduct) => {
-    setSelectedProduct(product);
-  };
+  const colors = ["#262125", "#D3EDC8", "#5BA653"];
+  const textColors = ["text-white", "text-black", "text-white"];
 
   return (
     <div>
       <section>
         {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5 py-8 md:px-10 md:py-12 relative">
-          {/* Buttons */}
-          <div className="flex h-12 mb-8 sticky top-16 z-10">
-            {featuredProducts.map((product) => (
-              <button
-                key={product.id}
-                className={`flex-1 py-2 px-4 ${
-                  selectedProduct.id === product.id
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-100"
-                }`}
-                onClick={() => handleButtonClick(product)}
-              >
-                {product.button}
-              </button>
-            ))}
-          </div>
+        <div className="mx-auto w-full max-w-7xl px-5 py-8 md:px-10 md:py-12 relative ">
           {/* Component */}
           <div className="flex flex-col gap-14">
-            {/* Title */}
-            <div className="flex max-w-5xl flex-col items-start gap-2.5 lg:flex-row lg:items-center ">
-              <h2 className="text-3xl md:text-5xl capitalize raleway-bold">
-                {selectedProduct.title}
-              </h2>
-            </div>
-            <div className="lg:h-[400px] mx-auto bg-gray-100 w-full flex justify-center">
-              <Image
-                src={selectedProduct.image}
-                alt={selectedProduct.title}
-                height={300}
-                width={300}
-                className="h-full"
-              />
-            </div>
-            {/* Displaying the content for the selected product */}
-            {selectedProduct.contents.map((content, index) => (
+            {featuredProducts.map((product, productIndex) => (
               <div
-                key={index}
-                className="relative flex cursor-pointer flex-col gap-4 p-5 border-t border-black sm:px-6 md:py-10 lg:flex-row lg:gap-28"
+                key={productIndex}
+                style={{
+                  backgroundColor: colors[productIndex % colors.length],
+                }}
+                className={`${
+                  textColors[productIndex % textColors.length]
+                } py-10`}
               >
-                <div className="flex items-center gap-4 pr-8 lg:w-1/3 lg:gap-20">
-                  <p className="p-2.5 text-sm sm:text-sm">
-                    {(index + 1).toString().padStart(2, "0")}
-                  </p>
-                  <h3 className="text-2xl md:text-3xl raleway-bold">
-                    {content.heading}
-                  </h3>
+                <div className="lg:h-[400px] mx-auto  w-full flex justify-center">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    height={300}
+                    width={300}
+                    className="h-full"
+                  />
                 </div>
-                <p className="max-w-xl text-sm sm:text-base work-sans-regular">
-                  {content.text}
-                </p>
+                {/* Title */}
+                <div className="flex  flex-col items-start gap-2.5 lg:flex-row lg:items-center mb-5 md:mb-10 px-10">
+                  <h2 className="text-3xl md:text-5xl capitalize raleway-bold">
+                    {product.title}
+                  </h2>
+                </div>
+
+                {/* Displaying the content for each product */}
+                <section className="flex flex-wrap w-full gap-6 px-10">
+                  {product.contents.map((content, index) => (
+                    <div
+                      key={index}
+                      className="relative flex flex-col   lg:w-[calc(33.333%-1rem)] "
+                    >
+                      <h3 className="text-xl mb-3 raleway-bold">
+                        {content.heading}
+                      </h3>
+                      <p className="max-w-xl text-sm sm:text-base work-sans-regular">
+                        {content.text}
+                      </p>
+                    </div>
+                  ))}
+                </section>
               </div>
             ))}
           </div>
