@@ -23,7 +23,7 @@ const CustomLink = ({
     <Link
       prefetch={prefetch}
       href={path}
-      className={`raleway-medium ${active ? "active-class" : ""}`} // Add any active class styling if needed
+      className={`raleway-semi-bold ${active ? "text-red-600" : ""}`} // Add any active class styling if needed
       onClick={handleClick} // Call handleClick on link click
     >
       {children}

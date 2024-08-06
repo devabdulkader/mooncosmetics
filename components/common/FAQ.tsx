@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 // Define a type for the FAQ item
 type FAQItem = {
@@ -19,24 +20,24 @@ const FAQ: React.FC = () => {
   // List of FAQs
   const faqs: FAQItem[] = [
     {
-      question: "How this theme is different from others in market?",
+      question: "What makes Moon Cosmetics products unique?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna",
+        "Moon Cosmetics products are specifically formulated to suit the weather conditions of Bangladesh. Our products are manufactured using advanced technology and by skilled workers, ensuring they meet international quality standards while being affordable and accessible to all classes of people.",
     },
     {
-      question: "What is your policy on distribution of Devjoy assets?",
+      question: "Are Moon Cosmetics products safe for all skin types?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna",
+        "Yes, our products are designed to be safe and effective for all skin types. We use high-quality ingredients and rigorously test our products to ensure they are suitable for various skin types and conditions.",
     },
     {
-      question: "How can I contribute to Devjoy?",
+      question: "Where can I purchase Moon Cosmetics products?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna",
+        "Moon Cosmetics products are available at various retail outlets across Bangladesh. You can also purchase our products online through our official website and authorized e-commerce platforms.",
     },
     {
-      question: "What other themes do you have?",
+      question: "How can I be sure that Moon Cosmetics products are genuine?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna",
+        "To ensure you are purchasing genuine Moon Cosmetics products, always buy from our official website, authorized retailers, and verified online stores. Look for our logo and check the packaging for authenticity seals.",
     },
   ];
 
@@ -47,10 +48,6 @@ const FAQ: React.FC = () => {
           <h1 className="text-3xl lg:text-4xl font-bold text-black">
             Frequently Asked Questions
           </h1>
-          <p className="font-inter mt-4 max-w-xl px-5 text-base font-light text-gray-500 lg:max-w-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna
-          </p>
         </div>
         <div className="mt-10 flex w-full max-w-4xl flex-col">
           {faqs.map((faq, index) => (
@@ -59,12 +56,22 @@ const FAQ: React.FC = () => {
               className="relative my-3 w-full rounded-md border border-gray-300 px-12 py-8"
             >
               <div className="max-w-3xl">
-                <h2 className="text-xl font-bold text-black">{faq.question}</h2>
-                {openFAQ === index && (
-                  <p className="font-inter mt-4 text-base font-light text-gray-500">
+                <h2 className="text-xl text-black raleway-bold">
+                  {faq.question}
+                </h2>
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: openFAQ === index ? "auto" : 0,
+                    opacity: openFAQ === index ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <p className="font-inter mt-4 text-base font-light text-gray-500 work-sans-regular">
                     {faq.answer}
                   </p>
-                )}
+                </motion.div>
               </div>
               <button
                 className="absolute right-5 top-9 focus:outline-none"
@@ -100,13 +107,6 @@ const FAQ: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="font-inter mx-auto mt-12 text-base text-gray-500 text-center">
-          Can’t find the answer you’re looking for? Reach out to our
-          <a href="#" className="text-black font-bold">
-            {" "}
-            customer support team.
-          </a>
-        </p>
       </div>
     </section>
   );

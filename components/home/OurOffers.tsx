@@ -12,6 +12,8 @@ import { Navigation, Autoplay } from "swiper/modules";
 import offer1 from "@/public/offers/offer1.jpg";
 import offer2 from "@/public/offers/offer2.jpg";
 import offer3 from "@/public/offers/offer3.jpg";
+import AnimatedSVG from "../motion/AnimatedSVG";
+import MotionContent from "../motion/MotionContent";
 
 const offers = [
   { image: offer1, title: "Special Offer 1" },
@@ -24,11 +26,16 @@ const offers = [
 
 const OurOffers = () => {
   return (
-    <div className="bg-white pt-14">
-      <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium text-center">
-        Our Special Offers
-      </h1>
-      <section className="px-5">
+    <div className="bg-white pt-8 lg:pt-14">
+      <div className="relative mb-5">
+        <MotionContent>
+          <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+            Our Special Offers
+          </h1>
+        </MotionContent>
+        <AnimatedSVG />
+      </div>
+      <section className="px-5 relative -top-10">
         <Swiper
           slidesPerView={1} // Show 3 slides per view
           breakpoints={{
@@ -55,7 +62,7 @@ const OurOffers = () => {
           {offers.map((offer, index) => (
             <SwiperSlide key={index}>
               <div className="container mx-auto lg:p-10 flex justify-center items-center">
-                <div className="w-full  lg:h-[65vh]">
+                <div className="w-full h-auto  lg:h-[65vh]">
                   <Image
                     src={offer.image}
                     alt={offer.title}

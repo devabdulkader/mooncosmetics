@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { ICategory } from "@/types";
 import getCategoriesData from "@/lib/getCategoriesData";
+import AnimatedSVG from "../motion/AnimatedSVG";
+import MotionContent from "../motion/MotionContent";
 
 const Categories = async () => {
   const categories: ICategory[] = await getCategoriesData();
@@ -10,9 +12,14 @@ const Categories = async () => {
   return (
     <section>
       <div className="mx-auto w-full max-w-7xl pt-10 md:px-10 ">
-        <h1 className="mb-4 lg:mb-14 text-4xl font-bold md:text-6xl raleway-medium text-center">
-          All of Our Categories
-        </h1>
+        <div className="relative">
+          <MotionContent>
+            <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+              All Categories
+            </h1>
+          </MotionContent>
+          <AnimatedSVG />
+        </div>
         <section className=" w-full  grid grid-cols-2 px-2 lg:px-0 lg:grid-cols-3 gap-3">
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>

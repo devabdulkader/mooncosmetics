@@ -113,6 +113,28 @@
   opacity: 1;
   transform: translateY(0);
 }
-.active-class {
-  color: rgb(224, 20, 20);
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 0, 300;
+  }
+  100% {
+    stroke-dasharray: 300, 0;
+  }
+}
+
+.path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw 1s ease-in-out forwards;
+}
+
+.certification-card {
+  --bg-color: #fff;
+  --main-color: #323232;
+
+  background: var(--bg-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  border-radius: 5px;
 }

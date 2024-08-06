@@ -11,17 +11,24 @@ import award2 from "@/public/moon/Gallary/AWARD2.png";
 import award3 from "@/public/moon/Gallary/AWARD3.png";
 
 import { Navigation, Autoplay } from "swiper/modules";
-const GallerySlider = () => {
+import MotionContent from "../motion/MotionContent";
+import AnimatedSVG from "../motion/AnimatedSVG";
+const Gallery = () => {
   return (
     <div className=" bg-white">
       <section>
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
           {/* Title */}
-          <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-medium text-center">
-            Our Gallery
-          </h1>
-          <p className="msm:text-base mb-8 mt-4 text-sm text-gray-500 md:mb-12 lg:mb-16 mx-auto text-center">
+          <div className="relative mb-5">
+            <MotionContent>
+              <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+                Our Gallery
+              </h1>
+            </MotionContent>
+            <AnimatedSVG />
+          </div>
+          <p className="msm:text-base mb-8 mt-4 text-sm md:text-xl text-gray-500 md:mb-12 lg:mb-16 mx-auto text-center">
             BEST TAX PAYER IN 2023 (KHULNA ZILLA) Chairman of the Moon Cosmetics
             has got Best Tax payer in Khulna District.
           </p>
@@ -61,4 +68,4 @@ const GallerySlider = () => {
   );
 };
 
-export default GallerySlider;
+export default Gallery;

@@ -8,6 +8,8 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { MdOutlineKeyboardArrowRight, MdClose } from "react-icons/md";
 import Logo from "./Logo";
 import getNavigationData from "@/lib/getNavigationData";
+import LiveChat from "@/components/button/LiveChat";
+import SocialIcons from "./SocialIcons";
 
 const MobileNav = () => {
   const [navigationData, setNavigationData] = useState<INavItem[]>([]);
@@ -79,7 +81,7 @@ const MobileNav = () => {
                     {navItem.items?.map((subItem, subIndex) => (
                       <li
                         key={subIndex}
-                        className="hover:bg-green-200 px-5 py-2"
+                        className="hover:bg-gray-100 hover:text-red-600 px-5 py-2"
                       >
                         <CustomLink
                           path={`/category${subItem.path}`}
@@ -94,6 +96,10 @@ const MobileNav = () => {
               </li>
             ))}
           </ul>
+          <div className="absolute bottom-24">
+            <SocialIcons />
+          </div>
+          <LiveChat />
         </div>
       )}
     </nav>

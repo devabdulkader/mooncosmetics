@@ -1,16 +1,20 @@
 import React from "react";
+import MotionContent from "../motion/MotionContent";
+import AnimatedSVG from "../motion/AnimatedSVG";
 
 const LocationMap = () => {
   return (
     <section className="bg-gray-100">
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900">
-            Visit Our Location
-          </h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
+          <div className="relative mb-5">
+            <MotionContent>
+              <h1 className="mb-4 text-3xl  font-bold md:text-6xl raleway-medium text-center">
+                Our Location
+              </h1>
+            </MotionContent>
+            <AnimatedSVG />
+          </div>
         </div>
         <div className="mt-16 lg:mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

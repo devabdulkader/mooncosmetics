@@ -3,9 +3,10 @@ import Herosection from "../components/home/Herosection";
 import OurOffers from "@/components/home/OurOffers";
 import Categories from "@/components/home/Categories";
 import Certification from "@/components/home/Certification";
-import GallerySlider from "@/components/home/GallerySlider";
+import Gallery from "@/components/home/Gallery";
 import LocationMap from "@/components/home/LocationMap";
 import FAQ from "@/components/common/FAQ";
+import Achievement from "@/components/home/Achievement";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       <OurOffers />
       <Categories />
       <Certification />
-      <GallerySlider />
+      <Achievement />
+      <Gallery />
       <FAQ />
       <LocationMap />
     </main>

@@ -57,7 +57,10 @@ const Nav = () => {
             {navItem.dropdown && openDropdownIndex === index && (
               <ul className="absolute left-0 top-14 shadow bg-white w-80 z-10">
                 {navItem.items?.map((subItem, subIndex) => (
-                  <li key={subIndex} className="hover:bg-green-200 px-5 py-2">
+                  <li
+                    key={subIndex}
+                    className="hover:bg-gray-100 hover:text-red-600 px-5 py-2"
+                  >
                     <CustomLink path={`/category${subItem.path}`}>
                       {subItem.title}
                     </CustomLink>
