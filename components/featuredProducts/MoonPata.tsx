@@ -145,8 +145,10 @@ const MoonPata = () => {
             {/* Image */}
             <Image
               alt=""
-              src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
+              src=""
               className="inline-block h-full w-full max-w-lg"
+              height={300}
+              width={300}
             />
           </div>
         </div>

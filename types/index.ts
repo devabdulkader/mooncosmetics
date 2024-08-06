@@ -47,3 +47,11 @@ export interface CustomLinkProps {
   children: ReactNode;
   setOpen?: (open: boolean) => void; // Add setOpen prop
 }
+
+export interface IFeaturedProduct {
+  id: number;
+  title: string;
+  image: string;
+  button: string;
+  contents: { heading: string; text: string }[]; // Ensure this matches your JSON data structure
+}

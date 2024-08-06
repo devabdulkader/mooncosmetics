@@ -111,7 +111,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                     <a
                       href="#"
                       onClick={() => handleCategoryChange("all")}
-                      className={`flex gap-3 rounded-md p-2 font-semibold text-[1rem] ${
+                      className={`flex gap-3 rounded-full px-5 py-1 font-semibold text-[1rem] ${
                         selectedCategory === "all"
                           ? "bg-[#e0e0e0]"
                           : "bg-[#f2f2f7]"
@@ -124,7 +124,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                         key={category.slug}
                         href="#"
                         onClick={() => handleCategoryChange(category.slug)}
-                        className={`flex gap-3 rounded-md p-2 text-[1rem]  ${
+                        className={`flex gap-3 rounded-full px-5 py-1 text-[1rem]  ${
                           selectedCategory === category.slug
                             ? "bg-[#e0e0e0]"
                             : "bg-[#f2f2f7]"
