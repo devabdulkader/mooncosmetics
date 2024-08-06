@@ -40,9 +40,9 @@ const page = () => {
     <section>
       <header className="relative z-20 ">
         {/* Hero Container */}
-        <div className="mx-auto max-w-7xl px-5 py-10 md:px-10 md:py-20">
+        <div className="mx-auto max-w-7xl px-5 pt-10 md:px-10 md:pt-24">
           {/* Component */}
-          <div className="mx-auto mb-8 w-full max-w-3xl text-center md:mb-12 lg:mb-16">
+          <div className="mx-auto w-full max-w-3xl text-center  ">
             {/* Hero Title */}
             <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-bold">
               The Website You Want Without The Dev Time.
@@ -59,22 +59,24 @@ const page = () => {
             alt=""
             className="inline-block max-h-[512px] w-full object-cover"
           /> */}
-          <video
-            src="/moon/videos/about-us.mp4"
-            className="  w-full  relative left-0 cursor-pointer h-full"
-            autoPlay
-            muted
-            loop
-          />
+          <div className="lg:h-[60vh]">
+            <video
+              src="/moon/videos/about-us.mp4"
+              className="  w-full  relative left-0 cursor-pointer h-full object-cover"
+              autoPlay
+              muted
+              loop
+            />
+          </div>
         </div>
       </header>
-      <section className="bg-blue-600 top relative">
+      <section className="bg-blue-600  pb-20">
         {/* Container */}
         <div className="h-60 w-full bg-blue-600 absolute -top-60 z-10 hidden lg:block"></div>
         <div className=" mx-auto w-full max-w-7xl px-5 pb-10 md:px-10 ">
-          <div className="grid  lg:grid-cols-2  bg-white">
-            <div className="flex flex-col gap-5  border border-solid border-black p-10 sm:p-20">
-              <h2 className="text-3xl font-bold md:text-5xl raleway-bold">
+          <div className=" bg-white">
+            <div className="flex flex-col gap-5  p-10 lg:px-20 lg:py-14">
+              <h2 className="text-3xl font-bold md:text-5xl raleway-bold text-center">
                 Our Story
               </h2>
               <p className="text-sm text-gray-500 sm:text-base work-sans-regular">
@@ -89,12 +91,25 @@ const page = () => {
                 Massa id neque aliquam vestibulum morbi blandit. Nulla
                 pellentesque dignissim enim sit amet venenatis.
               </p>
+              <p className="text-sm text-gray-500 sm:text-base work-sans-regular">
+                Aliquet risus feugiat in ante metus. Arcu dui vivamus arcu felis
+                bibendum ut. Vestibulum lorem sed risus ultricies tristique
+                nulla. Vitae et leo duis ut diam quam. Bibendum arcu vitae
+                elementum curabitur vitae nunc. Dictumst vestibulum rhoncus est
+                pellentesque. Lectus proin nibh nisl condimentum id. Ullamcorper
+                dignissim cras tincidunt lobortis feugiat vivamus.
+                <br />
+                <br />
+                Massa id neque aliquam vestibulum morbi blandit. Nulla
+                pellentesque dignissim enim sit amet venenatis.
+              </p>
             </div>
-            <Image
-              src="https://assets.website-files.com/6458c625291a94a195e6cf3a/64b7a30c42421ae3cbe5abb9_about%20image.svg"
+            {/* <Image
+              // src="https://assets.website-files.com/6458c625291a94a195e6cf3a/64b7a30c42421ae3cbe5abb9_about%20image.svg"
+              src=""
               alt=""
               className="inline-block h-full w-full  object-cover"
-            />
+            /> */}
           </div>
         </div>
       </section>
@@ -107,7 +122,8 @@ const page = () => {
             Smooth Process. Transformative Outcomes.
           </h2>
           {/* Content */}
-          <div className="flex flex-col items-center justify-center bg-contain bg-center pt-10 bg-[url('https://assets.website-files.com/6458c625291a94a195e6cf3a/648825fca218588cb636c341_Group%2048114.png')]">
+          <div className="flex flex-col items-center justify-center bg-contain bg-center pt-10 ">
+            {/* <div className="flex flex-col items-center justify-center bg-contain bg-center pt-10 bg-[url('https://assets.website-files.com/6458c625291a94a195e6cf3a/648825fca218588cb636c341_Group%2048114.png')]"> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-10">
               {services.map((service, index) => (
                 <div

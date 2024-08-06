@@ -28,17 +28,10 @@ const page = () => {
     <div className="w-full max-w-7xl pt-10 md:pt-10 mx-auto px-2 md:px-4">
       <div className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
-              Location
-            </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-6">
-              Our Store
-            </p>
-            {/* <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in, accusamus quisquam.
-            </p> */}
+          <div className="mx-auto w-full max-w-3xl text-center  ">
+            <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-bold">
+              The Website You Want Without The Dev Time.
+            </h1>
           </div>
 
           <Image
