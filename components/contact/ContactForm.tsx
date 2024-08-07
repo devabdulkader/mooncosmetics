@@ -1,20 +1,26 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
 
-const ContactForm = () => {
-  const [fullName, setFullName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+const ContactForm: React.FC = () => {
+  const [fullName, setFullName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   useEffect(() => {
     // This effect will only run on the client side
   }, []);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle form submission logic here
   };
+
+  const handleInputChange =
+    (setter: React.Dispatch<React.SetStateAction<string>>) =>
+    (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setter(event.target.value);
+    };
 
   return (
     <div className="w-full lg:max-w-xl bg-white p-5 rounded-lg lg:rounded-l-none custom-shadow">
@@ -36,8 +42,8 @@ const ContactForm = () => {
             type="text"
             placeholder="Enter your full name"
             value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          ></input>
+            onChange={handleInputChange(setFullName)}
+          />
         </div>
         <div className="mb-4">
           <label
@@ -52,8 +58,8 @@ const ContactForm = () => {
             type="tel"
             placeholder="Enter your phone number"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          ></input>
+            onChange={handleInputChange(setPhone)}
+          />
         </div>
         <div className="mb-4">
           <label
@@ -68,8 +74,8 @@ const ContactForm = () => {
             type="email"
             placeholder="Enter your email address"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
+            onChange={handleInputChange(setEmail)}
+          />
         </div>
         <div className="mb-4">
           <label
@@ -83,7 +89,7 @@ const ContactForm = () => {
             id="message"
             placeholder="Enter your message"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={handleInputChange(setMessage)}
           ></textarea>
         </div>
         <div className="mb-6 text-center">
