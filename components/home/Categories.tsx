@@ -32,8 +32,9 @@ const Categories = async () => {
                     height={300}
                     className="h-full w-full "
                   />
-                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-center uppercase text-white py-2 lg:py-4 lg:px-10 text-base lg:text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-center justify-center"></div>
+                  <div className="absolute inset-0  flex items-center justify-center">
+                    <p className="text-center  uppercase  px-5 py-2 rounded-full bg-white text-base lg:text-xl">
                       {category.title}
                     </p>
                   </div>
