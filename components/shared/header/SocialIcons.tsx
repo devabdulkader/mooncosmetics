@@ -39,33 +39,31 @@ const socialIcons = [
     hoverBgColor: "hover:bg-pink-500",
     url: "https://www.instagram.com/yourprofile",
   },
-  {
-    Icon: MdEmail,
-    text: "Gmail",
-    bgColor: "bg-red-600",
-    textColor: "text-red-600",
-    hoverBgColor: "hover:bg-red-600",
-    url: "mailto:mooncosmeticscorporate@gmail.com",
-  },
+  // {
+  //   Icon: MdEmail,
+  //   text: "Gmail",
+  //   bgColor: "bg-red-600",
+  //   textColor: "text-red-600",
+  //   hoverBgColor: "hover:bg-red-600",
+  //   url: "mailto:mooncosmeticscorporate@gmail.com",
+  // },
 ];
 
 const SocialIcons = () => {
   return (
-    <div className="">
-      <div className="flex">
-        {socialIcons.map((socialIcon, index) => (
-          <a
-            key={index}
-            href={socialIcon.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex h-8 w-8 rounded-full mr-3 justify-center items-center transition-colors duration-300 ${socialIcon.textColor} ${socialIcon.hoverBgColor} hover:text-white`}
-          >
-            <socialIcon.Icon className="cursor-pointer text-[14px]" />
-            <p className="hidden">{socialIcon.text}</p>
-          </a>
-        ))}
-      </div>
+    <div className="flex">
+      {socialIcons.map((socialIcon, index) => (
+        <a
+          key={index}
+          href={socialIcon.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex h-8 w-8 rounded-full mr-3 justify-center items-center transition-colors duration-300 ${socialIcon.textColor} ${socialIcon.hoverBgColor} hover:text-white`}
+        >
+          <socialIcon.Icon className="cursor-pointer text-[14px]" />
+          <p className="hidden">{socialIcon.text}</p>
+        </a>
+      ))}
     </div>
   );
 };

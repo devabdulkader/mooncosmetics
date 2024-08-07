@@ -156,11 +156,11 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                       {/* Inset overlay */}
                       <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       {/* Centered button shown on hover */}
-                      <div className="absolute inset-0 flex justify-center items-center">
-                        <button className="bg-white text-sm z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 py-2 flex items-center">
+                      <div className="absolute inset-0 flex justify-center items-end">
+                        <button className="bg-orange-300 w-full text-base z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 py-[11px] flex justify-center items-center">
                           Buy Now
                           {/* Cart Icon (SVG) */}
-                          <FaCartShopping className="text-orange-500 ml-2" />
+                          <FaCartShopping className="text-white ml-2" />
                         </button>
                       </div>
                     </div>

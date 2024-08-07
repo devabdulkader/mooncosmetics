@@ -5,11 +5,11 @@ const AboutDetails = () => {
     <div>
       <section>
         {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+        <div className="mx-auto w-full max-w-7xl px-5 py-10 md:px-10 ">
           {/* Component */}
           <div className="relative pt-60">
             {/* Item */}
-            <div className="sticky bottom-60 z-[3] -mt-48 mb-36 grid items-center gap-8 rounded-xl bg-[#e9e9f0] px-5 py-10 sm:px-12 lg:grid-cols-2 lg:gap-20">
+            <div className="sticky bottom-60 z-[3] -mt-48 mb-36 grid items-center gap-8 rounded-xl bg-[#FFADAD] px-5 py-10 sm:px-12 lg:grid-cols-2 lg:gap-20">
               <div className="max-w-3xl lg:grid lg:gap-32">
                 <h2 className="mb-4 text-3xl font-bold md:text-5xl lg:m-0">
                   Use by the world’s best companies
@@ -48,7 +48,7 @@ const AboutDetails = () => {
               </p>
             </div>
             {/* Item */}
-            <div className="sticky bottom-36 top-auto z-[2] -mt-24 mb-12 grid items-center gap-8 rounded-xl bg-[#f2f2f2] px-5 py-10 sm:px-12 lg:grid-cols-2 lg:gap-20">
+            <div className="sticky bottom-36 top-auto z-[2] -mt-24 mb-12 grid items-center gap-8 rounded-xl bg-[#FFD6A5] px-5 py-10 sm:px-12 lg:grid-cols-2 lg:gap-20">
               <div className="max-w-3xl lg:grid lg:gap-32">
                 <h2 className="mb-4 text-3xl font-bold md:text-5xl lg:m-0">
                   Use by the world’s best companies
@@ -87,7 +87,7 @@ const AboutDetails = () => {
               </p>
             </div>
             {/* Item */}
-            <div className="sticky bottom-12 top-auto mb-12 grid items-center gap-8 rounded-xl bg-[#d9d9d9] px-5 py-10 sm:px-12 lg:grid-cols-2 lg:gap-20">
+            <div className="sticky bottom-12 top-auto mb-12 grid items-center gap-8 rounded-xl bg-[#9cdabc] px-5 py-10 sm:px-12 lg:grid-cols-2 lg:gap-20">
               <div className="max-w-3xl lg:grid lg:gap-32">
                 <h2 className="mb-4 text-3xl font-bold md:text-5xl lg:m-0">
                   Use by the world’s best companies

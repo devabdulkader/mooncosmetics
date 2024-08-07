@@ -1,6 +1,9 @@
 import React from "react";
 import MotionContent from "../motion/MotionContent";
 import AnimatedSVG from "../motion/AnimatedSVG";
+import SocialIcons from "../shared/header/SocialIcons";
+import factory from "@/public/moon/Factory/factory.jpg";
+import Image from "next/image";
 
 const LocationMap = () => {
   return (
@@ -16,6 +19,12 @@ const LocationMap = () => {
             <AnimatedSVG />
           </div>
         </div>
+        <Image
+          src={factory}
+          alt=""
+          layout="responsive"
+          className="h-[60vh] w-full"
+        />
         <div className="mt-16 lg:mt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="rounded-lg overflow-hidden">
@@ -33,27 +42,27 @@ const LocationMap = () => {
                   <h3 className="text-lg font-medium text-gray-900">
                     Our Address
                   </h3>
-                  <p className="mt-1 text-gray-600">
-                    123 Main St, San Francisco, CA 94105
-                  </p>
+                  <p className="mt-1 text-gray-600">Dhaka, Bangladesh </p>
                 </div>
                 <div className="border-t border-gray-200 px-6 py-4">
                   <h3 className="text-lg font-medium text-gray-900">Hours</h3>
                   <p className="mt-1 text-gray-600">
-                    Monday - Friday: 9am - 5pm
+                    Saturday - Thursday: 9am - 8pm
                   </p>
-                  <p className="mt-1 text-gray-600">Saturday: 10am - 4pm</p>
-                  <p className="mt-1 text-gray-600">Sunday: Closed</p>
+                  <p className="mt-1 text-gray-600">Friday: Closed</p>
                 </div>
                 <div className="border-t border-gray-200 px-6 py-4">
                   <h3 className="text-lg font-medium text-gray-900">Contact</h3>
-                  <p className="mt-1 text-gray-600">Email: info@example.com</p>
-                  <p className="mt-1 text-gray-600">Phone: +1 23494 34993</p>
+                  <p className="mt-1 text-gray-600">
+                    Email: mooncosmeticscorporate@gmail.com
+                  </p>
+                  <p className="mt-1 text-gray-600">Phone: +8801716-822400</p>
                 </div>
                 <div className="border-t border-gray-200 px-6 py-4">
-                  <h3 className="text-lg font-medium text-gray-900">Contact</h3>
-                  <p className="mt-1 text-gray-600">Email: info@example.com</p>
-                  <p className="mt-1 text-gray-600">Phone: +1 23494 34993</p>
+                  <h3 className="text-lg font-medium text-gray-900">
+                    Social Media
+                  </h3>
+                  <SocialIcons />
                 </div>
               </div>
             </div>

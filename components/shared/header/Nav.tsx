@@ -34,7 +34,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="justify-between fixed top-0 z-50 items-center hidden lg:flex h-16 bg-[#faf6f7] w-full px-10 nav-shadow">
+    <nav className="justify-between fixed top-0 z-50 items-center hidden lg:flex h-16 bg-[#faf6f7] w-full px-10 custom-shadow">
       <div className="w-96">
         <Logo />
       </div>
@@ -42,7 +42,7 @@ const Nav = () => {
         {navigationData.map((navItem, index) => (
           <li
             key={index}
-            className="relative h-full flex items-center justify-center"
+            className="relative h-full flex items-center justify-center hover:border-b-2 hover:border-blue-600"
             onMouseEnter={() => handleMouseEnter(index)} // Show dropdown on mouse enter
             onMouseLeave={handleMouseLeave} // Hide dropdown on mouse leave
           >

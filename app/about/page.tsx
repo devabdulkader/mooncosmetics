@@ -40,12 +40,12 @@ const page = () => {
     <section>
       <header className="relative z-20 ">
         {/* Hero Container */}
-        <div className="mx-auto max-w-7xl px-5 pt-10 md:px-10 md:pt-24">
+        <div className="mx-auto max-w-7xl px-5 pt-10 md:px-10 md:pt-32">
           {/* Component */}
-          <div className="mx-auto w-full max-w-3xl text-center  ">
+          <div className="mx-auto w-full max-w-6xl text-center ">
             {/* Hero Title */}
-            <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-bold">
-              The Website You Want Without The Dev Time.
+            <h1 className="mb-10 text-4xl font-bold md:text-6xl raleway-bold">
+              Our Journey and Commitment to Quality Beauty Products
             </h1>
             {/* <p className="mx-auto mb-5 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-6 lg:mb-8 work-sans-regular">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
@@ -116,7 +116,7 @@ const page = () => {
       <AboutDetails />
       <section>
         {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+        <div className="mx-auto w-full max-w-7xl px-5  md:px-10 md:pb-10">
           {/* Title */}
           <h2 className="mx-auto mb-8 max-w-3xl text-center text-3xl font-bold md:mb-12 md:text-5xl lg:mb-16 raleway-bold">
             Smooth Process. Transformative Outcomes.
