@@ -20,7 +20,7 @@ const Gallery = () => {
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
           {/* Title */}
-          <div className="relative mb-5">
+          <div className="relative lg:mb-5">
             <MotionContent>
               <h1 className="mb-4 text-3xl md:text-6xl raleway-bold text-center">
                 Our Gallery
@@ -28,7 +28,7 @@ const Gallery = () => {
             </MotionContent>
             <AnimatedSVG />
           </div>
-          <p className="msm:text-base mb-8 mt-4 text-sm md:text-xl text-gray-500 md:mb-12 lg:mb-16 mx-auto text-center">
+          <p className="msm:text-base mb-8 lg:mt-4 text-sm md:text-xl text-gray-500 md:mb-12 lg:mb-16 mx-auto text-center">
             BEST TAX PAYER IN 2023 (KHULNA ZILLA) Chairman of the Moon Cosmetics
             has got Best Tax payer in Khulna District.
           </p>

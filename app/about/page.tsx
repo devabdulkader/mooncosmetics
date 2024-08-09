@@ -44,21 +44,11 @@ const page = () => {
           {/* Component */}
           <div className="mx-auto w-full max-w-6xl text-center ">
             {/* Hero Title */}
-            <h1 className="mb-10 text-4xl font-bold md:text-6xl raleway-bold">
+            <h1 className="mb-10 text-3xl font-bold md:text-6xl raleway-bold">
               Our Journey and Commitment to Quality Beauty Products
             </h1>
-            {/* <p className="mx-auto mb-5 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-6 lg:mb-8 work-sans-regular">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus venenatis, lectus
-            </p> */}
-            {/* Hero Button */}
           </div>
-          {/* Hero Image */}
-          {/* <img
-            src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
-            alt=""
-            className="inline-block max-h-[512px] w-full object-cover"
-          /> */}
+
           <div className="lg:h-[60vh]">
             <video
               src="/moon/videos/about-us.mp4"
@@ -116,9 +106,9 @@ const page = () => {
       <AboutDetails />
       <section>
         {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5  md:px-10 md:pb-10">
+        <div className="mx-auto w-full max-w-7xl px-5 mb-10 lg:mb-0 md:px-10 md:pb-10">
           {/* Title */}
-          <h2 className="mx-auto mb-8 max-w-3xl text-center text-3xl font-bold md:mb-12 md:text-5xl lg:mb-16 raleway-bold">
+          <h2 className="mx-auto  max-w-3xl text-center text-3xl font-bold md:mb-12 md:text-5xl lg:mb-16 raleway-bold">
             Smooth Process. Transformative Outcomes.
           </h2>
           {/* Content */}

@@ -8,7 +8,7 @@ const Page = async (): Promise<JSX.Element> => {
   return (
     <div className="lg:pt-32">
       <div className="mx-auto w-full max-w-6xl text-center  ">
-        <h1 className="mb-4 text-4xl font-bold md:text-6xl raleway-bold">
+        <h1 className="lg:mb-4 text-2xl mt-8 lg:mt-0 px-5 lg:text-4xl font-bold md:text-6xl raleway-bold">
           Discover the Finest Selection of Featured Products at Moon Cosmetics
         </h1>
       </div>

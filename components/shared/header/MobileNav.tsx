@@ -39,7 +39,7 @@ const MobileNav = () => {
   };
 
   return (
-    <nav className="lg:hidden sticky top-0 bg-white z-50 shadow-sm">
+    <nav className="xl:hidden sticky top-0 bg-white z-50 shadow-sm">
       <div className="flex justify-between items-center px-10 py-2">
         <Logo />
         <FaBarsStaggered
@@ -58,7 +58,7 @@ const MobileNav = () => {
               className="cursor-pointer"
             />
           </div>
-          <ul className="flex flex-col gap-4 mt-4">
+          <ul className="flex flex-col gap-4 mt-4 mb-6">
             {navigationData.map((navItem, index) => (
               <li
                 key={index}
@@ -96,6 +96,13 @@ const MobileNav = () => {
               </li>
             ))}
           </ul>
+
+          <CustomLink path={`/shop`}>
+            <div className="bg-orange-400 py-2 w-52 flex justify-center text-white rounded-full">
+              E-Commerce Shop
+            </div>
+          </CustomLink>
+
           <div className="absolute bottom-24">
             <SocialIcons />
           </div>

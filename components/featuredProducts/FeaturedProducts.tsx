@@ -40,14 +40,14 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                   />
                 </div>
                 {/* Title */}
-                <div className="flex  flex-col items-start gap-2.5 lg:flex-row lg:items-center mb-5 md:mb-10 px-10">
-                  <h2 className="text-3xl md:text-5xl capitalize raleway-bold">
+                <div className="flex  flex-col items-start gap-2.5 lg:flex-row lg:items-center mb-5 md:mb-10 px-5 lg:px-10">
+                  <h2 className="text-2xl md:text-5xl capitalize raleway-bold">
                     {product.title}
                   </h2>
                 </div>
 
                 {/* Displaying the content for each product */}
-                <section className="flex flex-wrap w-full gap-6 px-10">
+                <section className="flex flex-wrap w-full gap-6 px-5 lg:px-10">
                   {product.contents.map((content, index) => (
                     <div
                       key={index}

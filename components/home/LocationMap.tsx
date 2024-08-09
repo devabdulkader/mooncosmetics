@@ -40,10 +40,20 @@ const LocationMap = () => {
               <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                 <div className="px-6 py-4">
                   <h3 className="text-lg font-medium text-gray-900">
-                    Our Address
+                    Corporate Address
                   </h3>
-                  <p className="mt-1 text-gray-600">Dhaka, Bangladesh </p>
+                  <p className="mt-1 text-gray-600">
+                    {" "}
+                    Vatara, Gulshan, Dhaka, Bangladesh{" "}
+                  </p>
                 </div>
+                <div className="border-t border-gray-200 px-6 py-4">
+                  <h3 className="text-lg font-medium text-gray-900">Factory</h3>
+                  <p className="mt-1 text-gray-600">
+                    Sener Bazar, Khulna, Bangladesh
+                  </p>
+                </div>
+
                 <div className="border-t border-gray-200 px-6 py-4">
                   <h3 className="text-lg font-medium text-gray-900">Hours</h3>
                   <p className="mt-1 text-gray-600">

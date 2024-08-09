@@ -30,7 +30,7 @@ const OurOffers = () => {
       <div className="relative mb-5">
         <MotionContent>
           <h1 className="mb-4 text-3xl  md:text-6xl raleway-bold text-center">
-            Our Special Offers
+            Campaign & News
           </h1>
         </MotionContent>
         <AnimatedSVG />

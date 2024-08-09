@@ -24,7 +24,7 @@ const AboutDetails = () => {
                   01 Our Mission
                 </p>
               </div>
-              <div className="flex h-[480px] w-full items-center justify-center text-[#858585]">
+              <div className="flex lg:h-[480px] w-full items-center justify-center text-[#858585]">
                 <svg
                   width="112"
                   height="112"
@@ -63,7 +63,7 @@ const AboutDetails = () => {
                   02 Our Vision
                 </p>
               </div>
-              <div className="flex h-[480px] w-full items-center justify-center text-[#858585]">
+              <div className="flex lg:h-[480px] w-full items-center justify-center text-[#858585]">
                 <svg
                   width="112"
                   height="112"
@@ -102,7 +102,7 @@ const AboutDetails = () => {
                   03 Our Approach
                 </p>
               </div>
-              <div className="flex h-[480px] w-full items-center justify-center text-[#858585]">
+              <div className="flex lg:h-[480px] w-full items-center justify-center text-[#858585]">
                 <svg
                   width="112"
                   height="112"

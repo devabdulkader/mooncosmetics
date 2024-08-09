@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         {/* Component */}
-        <div className="grid grid-cols-[auto] justify-between gap-6 max-[991px]:grid-flow-col max-[991px]:[grid-template:'.'_auto_'.'_auto_/_0.75fr_0.75fr_0.75fr] max-[767px]:gap-y-8 max-[479px]:auto-cols-auto max-[479px]:grid-flow-dense sm:grid-cols-2 sm:gap-4 md:grid-cols-[max-content_auto_auto_auto_auto] lg:gap-10">
+        <div className="lg:grid grid-cols-[auto] justify-between gap-6 max-[991px]:grid-flow-col max-[991px]:[grid-template:'.'_auto_'.'_auto_/_0.75fr_0.75fr_0.75fr] max-[767px]:gap-y-8 max-[479px]:auto-cols-auto max-[479px]:grid-flow-dense  sm:grid-cols-2 sm:gap-4 md:grid-cols-[max-content_auto_auto_auto_auto] lg:gap-10">
           <div className="flex max-w-sm grid-cols-1 flex-col items-start justify-start gap-8 max-[991px]:[grid-area:span_1/span_4/span_1/span_4] max-[767px]:flex-col max-[767px]:[grid-area:span_1/span_2/span_1/span_2] lg:mr-10">
             <div className=" text-white">
               <Logo />
@@ -31,11 +31,27 @@ const Footer = () => {
                   mooncosmeticscorporate@gmail.com
                 </dd>
               </div>
+              <div className=" my-5">
+                <dt className="text-lg leading-6 font-medium text-white">
+                  Corporate Address
+                </dt>
+                <dd className="mt-2 text-base text-white">
+                  Vatara, Gulshan, Dhaka, Bangladesh
+                </dd>
+              </div>
+              <div className=" my-5">
+                <dt className="text-lg leading-6 font-medium text-white">
+                  Factory
+                </dt>
+                <dd className="mt-2 text-base text-white">
+                  Sener Bazar, Khulna, Bangladesh
+                </dd>
+              </div>
 
               <SocialIcons />
             </div>
           </div>
-          <div className="flex flex-col items-start raleway-bold">
+          <div className="flex flex-col items-start raleway-bold my-5 lg:my-0">
             <div className="mb-4">
               <p className="font-bold uppercase text-white">Quick Links</p>
             </div>
@@ -65,7 +81,7 @@ const Footer = () => {
               </p>
             </Link>
           </div>
-          <div className="flex flex-col items-start font-semibold">
+          <div className="flex flex-col items-start font-semibold mb-5 lg:mb-0">
             <div className="mb-4">
               <p className="font-bold uppercase text-white">category</p>
             </div>

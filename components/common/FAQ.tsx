@@ -43,20 +43,20 @@ const FAQ: React.FC = () => {
 
   return (
     <section>
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-5 py-16 md:px-10 md:py-20">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-5 md:px-10 md:py-20">
         <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10">
           <h1 className="text-3xl lg:text-4xl font-bold text-black">
             Frequently Asked Questions
           </h1>
         </div>
-        <div className="mt-10 flex w-full max-w-4xl flex-col">
+        <div className="mt-5 lg:mt-10 flex w-full max-w-4xl flex-col">
           {faqs.map((faq, index) => (
             <div
               key={index}
               className="relative my-3 w-full rounded-md border border-gray-300 px-12 py-8"
             >
               <div className="max-w-3xl">
-                <h2 className="text-xl text-black raleway-bold">
+                <h2 className="text-lg lg:text-xl text-black raleway-bold">
                   {faq.question}
                 </h2>
                 <motion.div
@@ -68,7 +68,7 @@ const FAQ: React.FC = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   style={{ overflow: "hidden" }}
                 >
-                  <p className="font-inter mt-4 text-base font-light text-gray-500 work-sans-regular">
+                  <p className="mt-4 text-base font-light text-gray-500 work-sans-regular">
                     {faq.answer}
                   </p>
                 </motion.div>

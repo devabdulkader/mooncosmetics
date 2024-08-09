@@ -4,11 +4,11 @@ const LiveChat = () => {
   return (
     <div className="fixed bottom-6  left-12 z-20 flex justify-center items-center ">
       <a
-        href="https://wa.me/01716-822400"
+        href="https://www.facebook.com/mooncosmeticsbd82"
         target="_blank"
         className="relative flex justify-center items-center"
       >
-        <svg
+        {/* <svg
           width="45"
           height="45"
           viewBox="0 0 39 39"
@@ -34,11 +34,24 @@ const LiveChat = () => {
             stroke="white"
             strokeWidth="0.2"
           ></path>
-        </svg>
-        <div className="relative inline-flex items-center rounded-xl  py-2 px-6 ml-2 group cursor-pointer shadow-lg bg-green-100">
-          <span className="absolute left-[-8px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-8  border-r-green-100 border-t-8 border-t-transparent border-b-8 border-b-transparent"></span>
+        </svg> */}
+        <div id="fb-messenger-logo">
+          <svg viewBox="10 6 1000 1024">
+            <path
+              id="lightning"
+              d="M213.6,634.6l146-231.6c23.2-36.8,73-46,107.8-19.9l116.1,87.1c10.7,8,25.3,7.9,35.9-0.1
+            l156.8-119c20.9-15.9,48.3,9.2,34.2,31.4L664.5,614c-23.2,36.8-73,46-107.8,19.9l-116.1-87.1c-10.7-8-25.3-7.9-35.9,0.1L247.8,666
+            C226.9,681.9,199.5,656.8,213.6,634.6z"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+        <div className="relative inline-flex items-center rounded-xl  py-2 px-6 ml-2 group cursor-pointer shadow-lg bg-white">
+          <span className="absolute left-[-8px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-8  border-r-white border-t-8 border-t-transparent border-b-8 border-b-transparent"></span>
           <span className="text-black group-hover:hidden">Live chat</span>
-          <span className="text-black hidden group-hover:inline">WhatsApp</span>
+          <span className="text-black hidden group-hover:inline">
+            Messanger
+          </span>
         </div>
       </a>
     </div>

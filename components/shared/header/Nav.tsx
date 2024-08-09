@@ -34,11 +34,11 @@ const Nav = () => {
   };
 
   return (
-    <nav className="justify-between fixed top-0 z-50 items-center hidden lg:flex h-16 bg-[#faf6f7] w-full px-10 custom-shadow">
-      <div className="w-96">
+    <nav className="justify-between fixed top-0 z-50 items-center hidden xl:flex h-16 bg-[#faf6f7] w-full px-10 custom-shadow">
+      <div className="w-72">
         <Logo />
       </div>
-      <ul className="flex gap-4 h-full justify-end items-center w-full z-50">
+      <ul className="flex gap-4 h-full justify-end items-center z-50">
         {navigationData.map((navItem, index) => (
           <li
             key={index}
@@ -70,12 +70,12 @@ const Nav = () => {
             )}
           </li>
         ))}
-        <CustomLink path={`/shop`}>
-          <li className="bg-orange-400 py-2 px-10 text-white rounded-full ">
-            E-Commerce Shop
-          </li>
-        </CustomLink>
       </ul>
+      <CustomLink path={`/shop`}>
+        <div className="bg-orange-400 py-2 px-10 text-white rounded-full">
+          E-Commerce Shop
+        </div>
+      </CustomLink>
     </nav>
   );
 };

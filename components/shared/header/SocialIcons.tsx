@@ -13,7 +13,7 @@ const socialIcons = [
     bgColor: "bg-blue-600",
     textColor: "text-blue-600",
     hoverBgColor: "hover:bg-blue-600",
-    url: "https://www.facebook.com/yourprofile",
+    url: "https://www.facebook.com/mooncosmeticsbd82",
   },
   {
     Icon: FaTwitter,
@@ -21,7 +21,7 @@ const socialIcons = [
     bgColor: "bg-blue-400",
     textColor: "text-blue-400",
     hoverBgColor: "hover:bg-blue-400",
-    url: "https://www.twitter.com/yourprofile",
+    url: "https://www.twitter.com",
   },
   {
     Icon: FaLinkedinIn,
@@ -29,7 +29,7 @@ const socialIcons = [
     bgColor: "bg-blue-700",
     textColor: "text-blue-700",
     hoverBgColor: "hover:bg-blue-700",
-    url: "https://www.linkedin.com/in/yourprofile",
+    url: "https://www.linkedin.com",
   },
   {
     Icon: FaInstagram,
@@ -37,7 +37,7 @@ const socialIcons = [
     bgColor: "bg-pink-500",
     textColor: "text-pink-500",
     hoverBgColor: "hover:bg-pink-500",
-    url: "https://www.instagram.com/yourprofile",
+    url: "https://www.instagram.com/mooncosmetics82?igshid=MTkzYmU5Z2JxNGc3aw==",
   },
   // {
   //   Icon: MdEmail,

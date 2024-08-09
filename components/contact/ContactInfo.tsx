@@ -68,17 +68,85 @@ const ContactInfo = () => {
           <p>mooncosmeticscorporate@gmail.com</p>
         </div>
 
-        <div>
+        <div className="hidden md:block">
           <div className="flex">
             <FaGlobe className="mt-1 mr-2" />
             <h3 className="mb-2">Social Network</h3>
           </div>
           <div className="flex space-x-4 pl-1">
-            <span>f</span>
-            <span>x</span>
-            <span>in</span>
-            <span>g</span>
+            <a
+              href="https://www.facebook.com/mooncosmeticsbd82"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <span>f</span>
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <span>x</span>
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <span>in</span>
+            </a>
+            <a
+              href="https://www.instagram.com/mooncosmetics82?igsh=MTkzYmU5Z2JxNGc3aw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <span>g</span>
+            </a>
           </div>
+        </div>
+      </div>
+      <div className="md:hidden pb-10">
+        <div className="flex">
+          <FaGlobe className="mt-1 mr-2" />
+          <h3 className="mb-2">Social Network</h3>
+        </div>
+        <div className="flex space-x-4 pl-1">
+          <a
+            href="https://www.facebook.com/mooncosmeticsbd82"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <span>f</span>
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <span>x</span>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <span>in</span>
+          </a>
+          <a
+            href="https://www.instagram.com/mooncosmetics82?igsh=MTkzYmU5Z2JxNGc3aw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-pointer"
+          >
+            <span>g</span>
+          </a>
         </div>
       </div>
     </div>

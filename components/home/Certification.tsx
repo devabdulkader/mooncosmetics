@@ -37,17 +37,17 @@ const Certification = () => {
               {/* Divider */}
               <div className="mb-16 mt-4 h-0.5 w-full bg-gray-300"></div>
 
-              <div className="flex justify-center space-x-10">
+              <div className="flex justify-center space-y-5 lg:space-y-0 lg:space-x-10 w-full flex-wrap">
                 <Image
                   src={certification1}
                   alt="Hero Banner"
-                  className=" h-36 w-40"
+                  className="h-auto w-auto sm:h-36 sm:w-44"
                   //   layout="responsive"
                 />
                 <Image
                   src={certification2}
                   alt="Hero Banner"
-                  className=" h-40 w-72"
+                  className="h-auto w-auto sm:h-40  sm:w-72"
 
                   //   layout="responsive"
                 />
