@@ -19,7 +19,6 @@ const Page: NextPage<CategoryPageProps> = async ({ params }) => {
 
   // Filter the category based on categoryId
   const category = categories.find((cat) => cat.slug === params.categoryId);
-  console.log(category);
 
   if (!category) {
     return <p>Category not found</p>;
@@ -65,11 +64,17 @@ const Page: NextPage<CategoryPageProps> = async ({ params }) => {
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 {/* Centered button shown on hover */}
                 <div className="absolute inset-0 flex justify-center items-end">
-                  <button className="bg-orange-300 w-full text-base z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 py-[11px] flex justify-center items-center">
-                    Buy Now
-                    {/* Cart Icon (SVG) */}
-                    <FaCartShopping className="text-white ml-2" />
-                  </button>
+                  <a
+                    href="https://m.me/mooncosmeticsbd82"
+                    target="_blank"
+                    className="w-full"
+                  >
+                    <button className="bg-orange-300 w-full text-base z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 py-[11px] flex justify-center items-center">
+                      Buy Now
+                      {/* Cart Icon (SVG) */}
+                      <FaCartShopping className="text-white ml-2" />
+                    </button>
+                  </a>
                 </div>
               </div>
               <h4 className="text-sm lg:text-[1rem] font-normal pt-3">

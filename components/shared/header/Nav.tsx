@@ -7,23 +7,76 @@ import { INavItem } from "@/types";
 import Logo from "./Logo";
 import getNavigationData from "@/lib/getNavigationData";
 const Nav = () => {
-  const [navigationData, setNavigationData] = useState<INavItem[]>([]);
+  const navigationData = [
+    {
+      title: "Home",
+      path: "/",
+      dropdown: false,
+    },
+    {
+      title: "Product Category",
+      path: "#",
+      dropdown: true,
+      items: [
+        {
+          title: "Herbal Oil",
+          path: "/herbal-oil",
+        },
+        {
+          title: "Hair Care",
+          path: "/hair-care",
+        },
+        {
+          title: "Skin Care",
+          path: "/skin-care",
+        },
+        {
+          title: "Winter Care",
+          path: "/winter-care",
+        },
+        {
+          title: "Color Cosmetics",
+          path: "/color-cosmetics",
+        },
+        {
+          title: "Fragrances",
+          path: "/fragrances",
+        },
+      ],
+    },
+    {
+      title: "Featured Products",
+      path: "/featured-products",
+      dropdown: false,
+    },
+    {
+      title: "About Us",
+      path: "/about",
+      dropdown: false,
+    },
+    {
+      title: "Contact Us",
+      path: "/contact",
+      dropdown: false,
+    },
+  ];
+
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
     null
   );
+  // const [navigationData, setNavigationData] = useState<INavItem[]>([]);
+  // useEffect(() => {
+  //   const fetchNavigationData = async () => {
+  //     try {
+  //       const data = await getNavigationData();
+  //       setNavigationData(data);
+  //     } catch (error) {
+  //       console.error("Error fetching navigation data:", error);
+  //     }
+  //   };
 
-  useEffect(() => {
-    const fetchNavigationData = async () => {
-      try {
-        const data = await getNavigationData();
-        setNavigationData(data);
-      } catch (error) {
-        console.error("Error fetching navigation data:", error);
-      }
-    };
-
-    fetchNavigationData();
-  }, []);
+  //   fetchNavigationData();
+  // }, []);
 
   const handleMouseEnter = (index: number) => {
     setOpenDropdownIndex(index);

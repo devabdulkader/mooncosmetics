@@ -7,6 +7,7 @@ import Gallery from "@/components/home/Gallery";
 import LocationMap from "@/components/home/LocationMap";
 import FAQ from "@/components/common/FAQ";
 import Achievement from "@/components/home/Achievement";
+import Testimonial from "@/components/home/Testimonial";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Certification />
       <Achievement />
       <Gallery />
+      <Testimonial />
       <FAQ />
       <LocationMap />
     </main>

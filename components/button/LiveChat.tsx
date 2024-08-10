@@ -4,7 +4,7 @@ const LiveChat = () => {
   return (
     <div className="fixed bottom-6  left-12 z-20 flex justify-center items-center ">
       <a
-        href="https://www.facebook.com/mooncosmeticsbd82"
+        href="https://m.me/mooncosmeticsbd82"
         target="_blank"
         className="relative flex justify-center items-center"
       >

@@ -1,5 +1,6 @@
 import AboutDetails from "@/components/about/AboutDetails";
 import FAQ from "@/components/common/FAQ";
+import Testimonial from "@/components/home/Testimonial";
 import Image from "next/image";
 
 const page = () => {
@@ -104,6 +105,7 @@ const page = () => {
         </div>
       </section>
       <AboutDetails />
+      <Testimonial />
       <section>
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 mb-10 lg:mb-0 md:px-10 md:pb-10">
@@ -130,6 +132,7 @@ const page = () => {
           </div>
         </div>
       </section>
+
       <FAQ />
     </section>
   );
