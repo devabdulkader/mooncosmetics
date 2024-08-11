@@ -140,12 +140,15 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
             </div>
             {/* Show All Products */}
             <div className="w-full lg:border-l-[1px] lg:pl-5 lg:pt-5">
-              <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 lg:px-5">
+              <div className="grid grid-cols-2 gap-5  sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 lg:px-5 xl:px-3 ">
                 {displayedProducts.map((product) => (
-                  <div key={product.name} className="relative group">
+                  <div
+                    key={product.name}
+                    className="relative group place-self-center lg:pb-4"
+                  >
                     {" "}
                     {/* Add group class here */}
-                    <div className="border h-60 lg:h-96 p-4 relative">
+                    <div className="border h-54 w-auto sm:w-40 lg:h-76 lg:w-56 xl:h-72 xl:w-60 2  p-4 relative ">
                       <Image
                         src={product.image}
                         alt={product.name}
@@ -156,12 +159,13 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                       {/* Inset overlay */}
                       <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       {/* Centered button shown on hover */}
-                      <div className="absolute inset-0 flex justify-center items-end">
+                      <div className="absolute inset-0 flex justify-center items-end ">
                         <a
                           href="https://m.me/mooncosmeticsbd82"
                           target="_blank"
+                          className="w-full"
                         >
-                          <button className="bg-orange-300 w-full text-base z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 py-[11px] flex justify-center items-center">
+                          <button className="bg-orange-300 w-full text-xs lg:text-base py-2 text-nowrap z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 lg:py-[11px] flex justify-center items-center">
                             Buy Now
                             {/* Cart Icon (SVG) */}
                             <FaCartShopping className="text-white ml-2" />
