@@ -10,9 +10,9 @@ const page = () => {
       <div className=" py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto w-full max-w-5xl text-center mb-10 ">
-            <h1 className="mb-4 text-3xl font-bold md:text-6xl raleway-bold">
-              Connect with Us for Assistance!
-            </h1>
+            <h2 className="  px-3 text-xl md:text-3xl capitalize raleway-bold 2xl:text-4xl pb-10">
+              Contact With Us
+            </h2>
           </div>
 
           <Image

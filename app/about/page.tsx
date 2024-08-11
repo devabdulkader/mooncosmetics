@@ -45,9 +45,9 @@ const page = () => {
           {/* Component */}
           <div className="mx-auto w-full max-w-6xl text-center ">
             {/* Hero Title */}
-            <h1 className="mb-10 text-3xl font-bold md:text-6xl raleway-bold">
+            <h2 className="  px-3 text-xl md:text-3xl capitalize raleway-bold 2xl:text-4xl pb-10">
               Our Journey and Commitment to Quality Beauty Products
-            </h1>
+            </h2>
           </div>
 
           <div className="lg:h-[60vh]">

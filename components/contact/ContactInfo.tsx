@@ -5,7 +5,7 @@ const ContactInfo = () => {
   return (
     <div className="pt-10">
       <div className="mb-5">
-        <h2 className="font-bold md:text-5xl text-3xl mb-4 michroma-regular">
+        <h2 className="  px-3 text-xl md:text-3xl capitalize raleway-bold 2xl:text-4xl pb-10">
           Get in Touch with Us
         </h2>
         <p className="mb-8 poppins-light">

@@ -148,7 +148,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                   >
                     {" "}
                     {/* Add group class here */}
-                    <div className="border h-54 w-auto sm:w-40 lg:h-76 lg:w-56 xl:h-72 xl:w-60 2  p-4 relative ">
+                    <div className="border h-54 w-auto   sm:w-40 lg:h-72 lg:w-56 xl:h-72 xl:w-56   p-4 relative ">
                       <Image
                         src={product.image}
                         alt={product.name}
@@ -165,7 +165,7 @@ const ShopSection: React.FC<ShopSectionProps> = ({ products }) => {
                           target="_blank"
                           className="w-full"
                         >
-                          <button className="bg-orange-300 w-full text-xs lg:text-base py-2 text-nowrap z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 lg:py-[11px] flex justify-center items-center">
+                          <button className="bg-orange-300 w-full text-xs lg:text-base py-2 text-nowrap z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-10 lg:py-[10px] flex justify-center items-center">
                             Buy Now
                             {/* Cart Icon (SVG) */}
                             <FaCartShopping className="text-white ml-2" />

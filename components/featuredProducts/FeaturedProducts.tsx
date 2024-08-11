@@ -17,7 +17,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
     <div>
       <section>
         {/* Container */}
-        <div className="mx-auto w-full max-w-7xl px-5 py-8 md:px-10 md:py-12 relative ">
+        <div className="mx-auto w-full max-w-7xl px-5 py-8 md:px-10 md:py-12 relative bg-white">
           {/* Component */}
           <div className="flex flex-col gap-14">
             {featuredProducts.map((product, productIndex) => (
@@ -30,7 +30,13 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                   textColors[productIndex % textColors.length]
                 } py-10`}
               >
-                <div className="lg:h-[400px] mx-auto  w-full flex justify-center">
+                {/* Title */}
+                <div className="flex  flex-col items-start gap-2.5 lg:flex-row lg:items-center mb-5 md:mb-10 px-5 lg:px-10">
+                  <h2 className="text-xl md:text-3xl capitalize raleway-bold  lg:mx-auto">
+                    {product.title}
+                  </h2>
+                </div>
+                <div className=" mx-auto  w-full flex justify-center">
                   <Image
                     src={product.image}
                     alt={product.title}
@@ -38,12 +44,6 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                     width={300}
                     className="h-full"
                   />
-                </div>
-                {/* Title */}
-                <div className="flex  flex-col items-start gap-2.5 lg:flex-row lg:items-center mb-5 md:mb-10 px-5 lg:px-10">
-                  <h2 className="text-2xl md:text-5xl capitalize raleway-bold">
-                    {product.title}
-                  </h2>
                 </div>
 
                 {/* Displaying the content for each product */}

@@ -18,7 +18,7 @@ export default function Home() {
       <Certification />
       <Achievement />
       <Gallery />
-      <Testimonial />
+
       <FAQ />
       <LocationMap />
     </main>

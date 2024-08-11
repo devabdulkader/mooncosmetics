@@ -18,7 +18,7 @@
     "title": "Skin Care",
     "breadcrumb": "category/skin-care",
     "slug": "skin-care",
-    "banner": "/moon/categoryBanner/banner-4.png",
+    "banner": "/moon/categoryBanner/banner-6.jpeg",
     "image": "/moon/category/category4.jpeg"
   },
   {
@@ -32,14 +32,14 @@
     "title": "Color Cosmetics",
     "breadcrumb": "category/color-cosmetics",
     "slug": "color-cosmetics",
-    "banner": "/moon/categoryBanner/banner-5.png",
+    "banner": "/moon/categoryBanner/banner-4.png",
     "image": "/moon/category/category5.jpeg"
   },
   {
     "title": "Fragrances",
     "breadcrumb": "category/fragrances",
     "slug": "fragrances",
-    "banner": "/moon/categoryBanner/banner-6.jpg",
+    "banner": "/moon/categoryBanner/banner-5.png",
     "image": "/moon/category/category3.jpeg"
   }
 ]
