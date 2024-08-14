@@ -1,27 +1,17 @@
 import React from "react";
-import testimonial from "@/public/moon/About Us/testimonial.jpg";
+import testimonial from "@/public/moon/about/testimonial.jpg";
 import Image from "next/image";
 const Testimonial = () => {
   return (
     <section>
       {/* Container */}
-      <div className="mx-auto w-full max-w-7xl  flex flex-col gap-y-16 px-5  sm:gap-y-20 md:px-10 pb-16">
+      <div className="mx-auto w-full max-w-7xl  flex flex-col gap-y-16 px-5  sm:gap-y-20 md:px-10 py-16">
         {/* Heading */}
         <h2 className="text-center text-3xl  md:text-5xl italic raleway-bold">
           Message from the Chairman
         </h2>
         {/* Content Container */}
-        <div className="mx-auto grid grid-cols-1 items-center gap-x-20 gap-y-10 sm:gap-y-14 md:grid-cols-2">
-          {/* Image */}
-          <div className="place-self-stretch overflow-hidden rounded-lg">
-            <Image
-              src={testimonial}
-              width={300}
-              height={300}
-              alt=""
-              className="inline-block h-full w-full max-w-lg object-cover rounded-lg"
-            />
-          </div>
+        <div className="mx-auto grid grid-cols-1 items-center  gap-y-10 sm:gap-y-14 ">
           {/* Contents */}
           <div className="lg: h-full">
             {/* Content */}
@@ -58,6 +48,16 @@ const Testimonial = () => {
               <span> Chairman</span>
               <span> MOON COSMETICS BANGLADESH</span>
             </h3>
+          </div>
+          {/* Image */}
+          <div className="w-60 h-60 rounded-full">
+            <Image
+              src={testimonial}
+              width={300}
+              height={300}
+              alt=""
+              className="inline-block h-full w-full max-w-lg object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>

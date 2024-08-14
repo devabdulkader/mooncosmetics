@@ -71,28 +71,35 @@ const page = () => {
                 Our Story
               </h2>
               <p className="text-sm text-gray-500 sm:text-base work-sans-regular">
-                Aliquet risus feugiat in ante metus. Arcu dui vivamus arcu felis
-                bibendum ut. Vestibulum lorem sed risus ultricies tristique
-                nulla. Vitae et leo duis ut diam quam. Bibendum arcu vitae
-                elementum curabitur vitae nunc. Dictumst vestibulum rhoncus est
-                pellentesque. Lectus proin nibh nisl condimentum id. Ullamcorper
-                dignissim cras tincidunt lobortis feugiat vivamus.
+                Founded in 1982, Moon Cosmetics has been at the forefront of
+                beauty and self-care, bringing timeless elegance and modern
+                innovation to women and men around the world. Our journey began
+                with a vision—to create a brand that embodies the delicate
+                balance between contemporary glamour and everyday accessibility.
+                Over the decades, we have grown from a small family-run business
+                to a respected name in the cosmetics industry, all while staying
+                true to our core values of quality, integrity, and innovation.{" "}
                 <br />
                 <br />
-                Massa id neque aliquam vestibulum morbi blandit. Nulla
-                pellentesque dignissim enim sit amet venenatis.
-              </p>
-              <p className="text-sm text-gray-500 sm:text-base work-sans-regular">
-                Aliquet risus feugiat in ante metus. Arcu dui vivamus arcu felis
-                bibendum ut. Vestibulum lorem sed risus ultricies tristique
-                nulla. Vitae et leo duis ut diam quam. Bibendum arcu vitae
-                elementum curabitur vitae nunc. Dictumst vestibulum rhoncus est
-                pellentesque. Lectus proin nibh nisl condimentum id. Ullamcorper
-                dignissim cras tincidunt lobortis feugiat vivamus.
+                At Moon Cosmetics, we believe that beauty is a reflection of
+                individuality. Our diverse range of products—from perfumes to
+                lipsticks, nail polishes to skincare—has been carefully crafted
+                to meet the evolving needs of our customers. Each product is a
+                testament to our commitment to excellence, combining the finest
+                ingredients with the latest in cosmetic technology.
                 <br />
                 <br />
-                Massa id neque aliquam vestibulum morbi blandit. Nulla
-                pellentesque dignissim enim sit amet venenatis.
+                Our brand represents more than just beauty; It&apos;s a
+                statement of empowerment. We are dedicated to helping our
+                customers express their unique selves, whether through the
+                subtle allure of a signature fragrance or the bold confidence of
+                a striking lip color. As we look to the future, we are excited
+                to continue our tradition of innovation, expanding our product
+                lines and reaching new heights in the world of beauty. Join us
+                on our journey as we continue to create products that not only
+                enhance your natural beauty but also inspire confidence and
+                self-expression. Moon Cosmetics—where timeless elegance meets
+                modern style.
               </p>
             </div>
             {/* <Image
@@ -105,8 +112,8 @@ const page = () => {
         </div>
       </section>
       <AboutDetails />
-      <Testimonial />
-      <section>
+
+      <section className="pt-20">
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 mb-10 lg:mb-0 md:px-10 md:pb-10">
           {/* Title */}
