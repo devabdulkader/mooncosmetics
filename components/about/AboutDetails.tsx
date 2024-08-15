@@ -60,7 +60,7 @@ const AboutDetails: React.FC = () => {
               <p>{item.label}</p>
             </div>
             <div className="flex flex-col  gap-8 sm:gap-20 lg:flex-row lg:items-center">
-              <div className=";g:w-1/2">
+              <div className="lg:w-1/2">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -70,10 +70,8 @@ const AboutDetails: React.FC = () => {
                 />
               </div>
               <div className="lg:w-1/2">
-                <h2 className="mb-4 text-3xl font-bold md:text-5xl">
-                  {item.title}
-                </h2>
-                <p className="text-sm text-[#636262] sm:text-base">
+                <h2 className="mb-4 text-3xl font-bold ">{item.title}</h2>
+                <div className="text-sm text-[#636262] sm:text-base">
                   {item.content}
                   {item.id == 3 && (
                     <>
@@ -85,7 +83,7 @@ const AboutDetails: React.FC = () => {
                       </h3>
                     </>
                   )}
-                </p>
+                </div>
               </div>
             </div>
           </div>
